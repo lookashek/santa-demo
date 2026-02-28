@@ -72,21 +72,6 @@ export default function LetterSelectFlow() {
     );
   }
 
-  if (letter.status !== 'available') {
-    return (
-      <div className="max-w-lg mx-auto px-4 py-16 text-center">
-        <p className="text-xl font-semibold text-stone-700 mb-2">Ten list jest już wybrany.</p>
-        <p className="text-stone-500 mb-6">Wybierz inny dostępny list.</p>
-        <Link
-          to="/listy"
-          className="bg-forest hover:bg-forest-dark text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
-        >
-          ← Wróć do listów
-        </Link>
-      </div>
-    );
-  }
-
   if (done) {
     return (
       <div className="max-w-lg mx-auto px-4 py-16 text-center">
@@ -115,6 +100,21 @@ export default function LetterSelectFlow() {
         </Link>
         <Link to="/listy" className="text-forest hover:text-forest-dark text-sm">
           Wróć do listów
+        </Link>
+      </div>
+    );
+  }
+
+  if (letter.status !== 'available') {
+    return (
+      <div className="max-w-lg mx-auto px-4 py-16 text-center">
+        <p className="text-xl font-semibold text-stone-700 mb-2">Ten list jest już wybrany.</p>
+        <p className="text-stone-500 mb-6">Wybierz inny dostępny list.</p>
+        <Link
+          to="/listy"
+          className="bg-forest hover:bg-forest-dark text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
+        >
+          ← Wróć do listów
         </Link>
       </div>
     );
