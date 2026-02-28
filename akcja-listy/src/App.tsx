@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { SantaProvider } from './context/SantaContext';
 import Layout from './components/Layout';
 import HomePage from './pages/public/HomePage';
 import LettersPage from './pages/public/LettersPage';
@@ -16,6 +17,7 @@ import AdminUsers from './pages/admin/AdminUsers';
 
 function App() {
   return (
+    <SantaProvider>
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
@@ -40,6 +42,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </SantaProvider>
   );
 }
 
