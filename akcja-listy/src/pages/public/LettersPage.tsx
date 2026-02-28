@@ -52,18 +52,11 @@ function LetterModal({
           </button>
         </div>
 
-        <img
-          src={letter.imageUrls[0]}
-          alt={`List ${letter.code}`}
-          className="w-full rounded-lg mb-4 object-cover"
-        />
-        {letter.imageUrls.length > 1 && (
-          <div className="grid grid-cols-2 gap-2 mb-4">
-            {letter.imageUrls.slice(1).map((url, i) => (
-              <img key={i} src={url} alt={`List ${letter.code} str. ${i + 2}`} className="w-full rounded-lg" />
-            ))}
-          </div>
-        )}
+        <div className="flex flex-col gap-4 mb-4">
+          {letter.imageUrls.map((url, i) => (
+            <img key={i} src={url} alt={`List ${letter.code} str. ${i + 1}`} className="w-full rounded-lg" />
+          ))}
+        </div>
 
         <div className="flex items-center justify-between">
           <StatusBadge status={letter.status} />
