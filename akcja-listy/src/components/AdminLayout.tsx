@@ -1,13 +1,22 @@
 import { NavLink, Outlet, Link } from 'react-router-dom';
+import {
+  ChartBarIcon,
+  BuildingOffice2Icon,
+  DocumentTextIcon,
+  StarIcon,
+  Cog6ToothIcon,
+  EnvelopeIcon,
+  UsersIcon,
+} from '@heroicons/react/24/outline';
 
 const NAV = [
-  { to: '/admin', label: '📊 Dashboard', end: true },
-  { to: '/admin/placowki', label: '🏥 Placówki' },
-  { to: '/admin/listy', label: '✉️ Listy' },
-  { to: '/admin/mikolajowie', label: '🎅 Mikołajowie' },
-  { to: '/admin/akcje', label: '⚙️ Konfiguracja Akcji' },
-  { to: '/admin/maile', label: '📧 Maile' },
-  { to: '/admin/uzytkownicy', label: '👤 Użytkownicy' },
+  { to: '/admin', label: 'Dashboard', icon: ChartBarIcon, end: true },
+  { to: '/admin/placowki', label: 'Placówki', icon: BuildingOffice2Icon },
+  { to: '/admin/listy', label: 'Listy', icon: DocumentTextIcon },
+  { to: '/admin/mikolajowie', label: 'Mikołajowie', icon: StarIcon },
+  { to: '/admin/akcje', label: 'Konfiguracja Akcji', icon: Cog6ToothIcon },
+  { to: '/admin/maile', label: 'Maile', icon: EnvelopeIcon },
+  { to: '/admin/uzytkownicy', label: 'Użytkownicy', icon: UsersIcon },
 ];
 
 export default function AdminLayout() {
@@ -31,10 +40,11 @@ export default function AdminLayout() {
               end={item.end}
               className={({ isActive }) =>
                 isActive
-                  ? 'block bg-forest text-gold-light rounded-lg px-4 py-2.5 font-medium text-base'
-                  : 'block text-white/70 hover:bg-forest hover:text-white rounded-lg px-4 py-2.5 transition-colors text-base'
+                  ? 'flex items-center gap-3 bg-forest text-gold-light rounded-lg px-4 py-2.5 font-medium text-base'
+                  : 'flex items-center gap-3 text-white/70 hover:bg-forest hover:text-white rounded-lg px-4 py-2.5 transition-colors text-base'
               }
             >
+              <item.icon className="w-5 h-5 flex-shrink-0" />
               {item.label}
             </NavLink>
           ))}
