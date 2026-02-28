@@ -3,9 +3,9 @@ import { NavLink, Outlet } from 'react-router-dom';
 export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-forest-dark text-white px-6 py-4 shadow-md">
+      <header className="bg-white border-b border-stone-200 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <NavLink to="/" className="text-xl font-bold text-white">
+          <NavLink to="/" className="text-xl font-black uppercase tracking-wide text-stone-900">
             Święty Mikołaj dla Seniora
           </NavLink>
           <nav className="flex items-center gap-6">
@@ -13,7 +13,7 @@ export default function Layout() {
               to="/"
               end
               className={({ isActive }) =>
-                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
+                isActive ? 'font-black uppercase text-sm tracking-wide text-stone-900 underline' : 'font-black uppercase text-sm tracking-wide text-stone-900 hover:text-forest transition-colors'
               }
             >
               Strona główna
@@ -21,7 +21,7 @@ export default function Layout() {
             <NavLink
               to="/listy"
               className={({ isActive }) =>
-                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
+                isActive ? 'font-black uppercase text-sm tracking-wide text-stone-900 underline' : 'font-black uppercase text-sm tracking-wide text-stone-900 hover:text-forest transition-colors'
               }
             >
               Listy
@@ -29,7 +29,7 @@ export default function Layout() {
             <NavLink
               to="/galeria"
               className={({ isActive }) =>
-                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
+                isActive ? 'font-black uppercase text-sm tracking-wide text-stone-900 underline' : 'font-black uppercase text-sm tracking-wide text-stone-900 hover:text-forest transition-colors'
               }
             >
               Galeria
@@ -37,7 +37,7 @@ export default function Layout() {
             <NavLink
               to="/mikolaj"
               className={({ isActive }) =>
-                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
+                isActive ? 'font-black uppercase text-sm tracking-wide text-stone-900 underline' : 'font-black uppercase text-sm tracking-wide text-stone-900 hover:text-forest transition-colors'
               }
             >
               Moje listy
@@ -45,7 +45,7 @@ export default function Layout() {
             <NavLink
               to="/admin"
               className={({ isActive }) =>
-                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
+                isActive ? 'font-black uppercase text-sm tracking-wide text-stone-900 underline' : 'font-black uppercase text-sm tracking-wide text-stone-900 hover:text-forest transition-colors'
               }
             >
               Admin
