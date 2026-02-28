@@ -11,6 +11,7 @@ import {
 } from '../../data/db-helpers';
 import { actions } from '../../data/mock-db';
 import type { Letter } from '../../data/models';
+import { ConfirmDialog } from '../../components/ConfirmDialog';
 
 function StatusBadge({ status }: { status: Letter['status'] }) {
   const map = {
@@ -37,6 +38,7 @@ function StatusBadge({ status }: { status: Letter['status'] }) {
 function LetterCard({ letter, turnDeadline }: { letter: Letter; turnDeadline?: string }) {
   const [showConfirm, setShowConfirm] = useState(false);
   const [showTracking, setShowTracking] = useState(false);
+  const [showConfirmReturn, setShowConfirmReturn] = useState(false);
   const [amount, setAmount] = useState('');
   const [deliveryMethod, setDeliveryMethod] = useState<'shipping' | 'personal'>('shipping');
   const [trackingLink, setTrackingLink] = useState('');
@@ -51,10 +53,8 @@ function LetterCard({ letter, turnDeadline }: { letter: Letter; turnDeadline?: s
   };
 
   const handleReturn = () => {
-    if (window.confirm('Czy na pewno chcesz zrezygnować z tego listu? Wróci on do puli.')) {
-      returnLetter(letter.id);
-      forceUpdate((n) => n + 1);
-    }
+    returnLetter(letter.id);
+    forceUpdate((n) => n + 1);
   };
 
   const handleTracking = () => {
@@ -161,12 +161,22 @@ function LetterCard({ letter, turnDeadline }: { letter: Letter; turnDeadline?: s
 
             {/* Zrezygnuj */}
             <button
-              onClick={handleReturn}
+              onClick={() => setShowConfirmReturn(true)}
               className="bg-red-50 hover:bg-red-100 text-red-700 font-medium px-4 py-2 rounded-lg border border-red-200 transition-colors text-sm"
             >
               ✕ Zrezygnuj
             </button>
           </div>
+
+          {showConfirmReturn && (
+            <ConfirmDialog
+              title="Zrezygnować z listu?"
+              message="List wróci do puli i będzie ponownie dostępny dla innych Mikołajów."
+              confirmLabel="Zrezygnuj"
+              onConfirm={() => { setShowConfirmReturn(false); handleReturn(); }}
+              onCancel={() => setShowConfirmReturn(false)}
+            />
+          )}
 
           {showTracking && (
             <div className="bg-sand rounded-lg p-3 space-y-2">

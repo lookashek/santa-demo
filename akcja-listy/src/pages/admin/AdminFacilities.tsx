@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { getFacilities, updateFacility } from '../../data/db-helpers';
 import type { Facility } from '../../data/models';
+import { Toast } from '../../components/Toast';
 
-function EditModal({ facility, onClose }: { facility: Facility; onClose: () => void }) {
+function EditModal({ facility, onClose }: { facility: Facility; onClose: (msg?: string) => void }) {
   const [form, setForm] = useState({ ...facility });
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -10,19 +11,18 @@ function EditModal({ facility, onClose }: { facility: Facility; onClose: () => v
 
   const handleSave = () => {
     updateFacility(facility.id, form);
-    alert('Placówka zaktualizowana.');
-    onClose();
+    onClose('Placówka zaktualizowana.');
   };
 
   const inputCls = 'w-full px-3 py-2 rounded-lg border border-stone-300 bg-white text-stone-900 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest text-sm';
   const labelCls = 'block text-xs font-medium text-stone-600 mb-1';
 
   return (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center" onClick={onClose}>
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center" onClick={() => onClose()}>
       <div className="bg-white rounded-2xl shadow-xl max-w-lg w-full mx-4 p-6 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-semibold text-stone-900">Edycja: {facility.name}</h3>
-          <button onClick={onClose} className="text-stone-400 hover:text-stone-600 text-2xl leading-none">×</button>
+          <button onClick={() => onClose()} className="text-stone-400 hover:text-stone-600 text-2xl leading-none">×</button>
         </div>
 
         <div className="grid grid-cols-2 gap-3">
@@ -82,7 +82,7 @@ function EditModal({ facility, onClose }: { facility: Facility; onClose: () => v
           <button onClick={handleSave} className="bg-forest hover:bg-forest-dark text-white font-medium px-5 py-2 rounded-lg transition-colors text-sm">
             Zapisz
           </button>
-          <button onClick={onClose} className="bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium px-5 py-2 rounded-lg transition-colors text-sm">
+          <button onClick={() => onClose()} className="bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium px-5 py-2 rounded-lg transition-colors text-sm">
             Anuluj
           </button>
         </div>
@@ -97,6 +97,7 @@ export default function AdminFacilities() {
   const [editing, setEditing] = useState<Facility | null>(null);
   const [sortKey, setSortKey] = useState<'name' | 'city'>('name');
   const [sortAsc, setSortAsc] = useState(true);
+  const [toast, setToast] = useState('');
 
   const handleSort = (key: 'name' | 'city') => {
     if (sortKey === key) setSortAsc((a) => !a);
@@ -174,9 +175,11 @@ export default function AdminFacilities() {
       {editing && (
         <EditModal
           facility={editing}
-          onClose={() => { setEditing(null); setFacilities(getFacilities()); }}
+          onClose={(msg) => { setEditing(null); setFacilities(getFacilities()); if (msg) setToast(msg); }}
         />
       )}
+
+      {toast && <Toast message={toast} onDismiss={() => setToast('')} />}
     </div>
   );
 }

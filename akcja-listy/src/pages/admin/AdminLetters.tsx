@@ -10,6 +10,8 @@ import {
   getFacilityById,
 } from '../../data/db-helpers';
 import type { Letter, LetterStatus } from '../../data/models';
+import { ConfirmDialog } from '../../components/ConfirmDialog';
+import { Toast } from '../../components/Toast';
 
 const STATUS_LABELS: Record<LetterStatus, string> = {
   available: 'Dostępny',
@@ -28,16 +30,19 @@ const STATUS_BADGE: Record<LetterStatus, string> = {
 function DetailModal({ letter, onClose, onMutate }: { letter: Letter; onClose: () => void; onMutate: () => void }) {
   const facility = getFacilityById(letter.facilityId);
   const santa = letter.santaId ? getSantaById(letter.santaId) : null;
+  const [confirmAction, setConfirmAction] = useState<'return' | 'detach' | null>(null);
 
   const handleConfirm = () => {
     confirmLetter(letter.id, 0);
     onMutate();
   };
   const handleReturn = () => {
-    if (window.confirm('Wycofać list?')) { returnLetter(letter.id); onMutate(); }
+    returnLetter(letter.id);
+    onMutate();
   };
   const handleDetach = () => {
-    if (window.confirm('Odpiąć Mikołaja od listu?')) { detachSantaFromLetter(letter.id); onMutate(); }
+    detachSantaFromLetter(letter.id);
+    onMutate();
   };
 
   return (
@@ -81,17 +86,36 @@ function DetailModal({ letter, onClose, onMutate }: { letter: Letter; onClose: (
             </button>
           )}
           {(letter.status === 'selected' || letter.status === 'confirmed') && (
-            <button onClick={handleReturn} className="bg-red-600 hover:bg-red-700 text-white text-sm font-medium px-4 py-1.5 rounded-lg transition-colors">
+            <button onClick={() => setConfirmAction('return')} className="bg-red-600 hover:bg-red-700 text-white text-sm font-medium px-4 py-1.5 rounded-lg transition-colors">
               Wycofaj list
             </button>
           )}
           {letter.santaId && (
-            <button onClick={handleDetach} className="bg-stone-200 hover:bg-stone-300 text-stone-700 text-sm font-medium px-4 py-1.5 rounded-lg transition-colors">
+            <button onClick={() => setConfirmAction('detach')} className="bg-stone-200 hover:bg-stone-300 text-stone-700 text-sm font-medium px-4 py-1.5 rounded-lg transition-colors">
               Odepnij Mikołaja
             </button>
           )}
         </div>
       </div>
+
+      {confirmAction === 'return' && (
+        <ConfirmDialog
+          title="Wycofać list?"
+          message="List wróci do puli i będzie ponownie dostępny do wyboru."
+          confirmLabel="Wycofaj"
+          onConfirm={handleReturn}
+          onCancel={() => setConfirmAction(null)}
+        />
+      )}
+      {confirmAction === 'detach' && (
+        <ConfirmDialog
+          title="Odpiąć Mikołaja od listu?"
+          message="Mikołaj straci dostęp do tego listu. List pozostanie w aktualnym statusie."
+          confirmLabel="Odepnij"
+          onConfirm={handleDetach}
+          onCancel={() => setConfirmAction(null)}
+        />
+      )}
     </div>
   );
 }
@@ -106,6 +130,7 @@ export default function AdminLetters() {
   const [turnFilter, setTurnFilter] = useState('');
   const [selected, setSelected] = useState<Letter | null>(null);
   const [, forceUpdate] = useState(0);
+  const [toast, setToast] = useState('');
 
   const filtered = letters.filter((l) =>
     (!statusFilter || l.status === statusFilter) &&
@@ -123,7 +148,7 @@ export default function AdminLetters() {
       <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
         <h1 className="text-2xl font-bold text-forest-dark">✉️ Listy</h1>
         <button
-          onClick={() => alert('Eksport do Excela — funkcja dostępna w pełnej wersji.')}
+          onClick={() => setToast('Eksport do Excela — funkcja dostępna w pełnej wersji.')}
           className="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
         >
           📥 Eksport do Excela
@@ -192,6 +217,8 @@ export default function AdminLetters() {
           onMutate={() => { forceUpdate((n) => n + 1); setSelected(null); }}
         />
       )}
+
+      {toast && <Toast message={toast} variant="info" onDismiss={() => setToast('')} />}
     </div>
   );
 }
