@@ -1,6 +1,6 @@
 export const colors = {
-  forest: '#CC0000',
-  forestDark: '#990000',
+  forest: '#2D5F4A',
+  forestDark: '#1A3C2E',
   gold: '#111111',
   goldLight: '#444444',
   cream: '#FFFFFF',
