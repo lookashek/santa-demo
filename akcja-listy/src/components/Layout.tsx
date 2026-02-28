@@ -58,7 +58,7 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      <footer className="bg-forest-dark text-white/60 text-sm text-center py-6">
+      <footer className="bg-white border-t border-stone-200 text-stone-400 text-sm text-center py-6">
         <p>© {new Date().getFullYear()} Fundacja Święty Mikołaj dla Seniora. Wszelkie prawa zastrzeżone.</p>
       </footer>
     </div>
