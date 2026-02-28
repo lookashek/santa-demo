@@ -48,7 +48,7 @@ function DetailModal({ letter, onClose, onMutate }: { letter: Letter; onClose: (
           <button onClick={onClose} className="text-stone-400 hover:text-stone-600 text-2xl leading-none">×</button>
         </div>
 
-        <img src={letter.imageUrls[0]} alt={letter.code} className="w-full h-48 object-cover rounded-lg mb-4" />
+        <img src={letter.imageUrls[0]} alt={letter.code} className="w-full object-contain rounded-lg mb-4" />
 
         <div className="space-y-1.5 text-sm mb-4">
           <p><span className="text-stone-500 w-32 inline-block">Status:</span>
