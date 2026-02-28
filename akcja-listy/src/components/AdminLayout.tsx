@@ -24,8 +24,8 @@ export default function AdminLayout() {
     <div className="min-h-screen flex flex-col bg-stone-100">
       {/* Top header */}
       <header className="bg-forest-dark text-white px-6 py-3 flex items-center justify-between shadow-md flex-shrink-0">
-        <span className="font-bold text-gold">Panel Administratora — Akcja Listy</span>
-        <Link to="/" className="text-white/70 hover:text-gold text-sm transition-colors">
+        <span className="font-bold text-white">Panel Administratora — Akcja Listy</span>
+        <Link to="/" className="text-white/70 hover:text-white text-sm transition-colors">
           ← Wróć do strony
         </Link>
       </header>
@@ -40,7 +40,7 @@ export default function AdminLayout() {
               end={item.end}
               className={({ isActive }) =>
                 isActive
-                  ? 'flex items-center gap-3 bg-forest text-gold-light rounded-lg px-4 py-2.5 font-medium text-base'
+                  ? 'flex items-center gap-3 bg-forest text-white rounded-lg px-4 py-2.5 font-medium text-base'
                   : 'flex items-center gap-3 text-white/70 hover:bg-forest hover:text-white rounded-lg px-4 py-2.5 transition-colors text-base'
               }
             >

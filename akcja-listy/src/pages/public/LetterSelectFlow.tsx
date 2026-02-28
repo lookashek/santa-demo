@@ -20,7 +20,7 @@ function StepIndicator({ current }: { current: Step }) {
                 done
                   ? 'bg-forest text-white'
                   : active
-                  ? 'bg-gold text-white'
+                  ? 'bg-forest text-white'
                   : 'bg-stone-200 text-stone-500'
               }`}
             >
@@ -205,7 +205,7 @@ export default function LetterSelectFlow() {
               <span className="text-sm text-stone-700">Wybieram jako firma</span>
             </label>
             {isCompany && (
-              <div className="space-y-3 border-l-2 border-gold-light pl-4">
+              <div className="space-y-3 border-l-2 border-stone-300 pl-4">
                 <div>
                   <label className={labelCls}>NIP</label>
                   <input
@@ -310,7 +310,7 @@ export default function LetterSelectFlow() {
           {step > 1 ? (
             <button
               onClick={() => setStep((s) => (s - 1) as Step)}
-              className="bg-sand hover:bg-gold-light text-forest-dark font-medium px-6 py-2.5 rounded-lg border border-stone-200 transition-colors"
+              className="bg-sand hover:bg-stone-200 text-stone-700 font-medium px-6 py-2.5 rounded-lg border border-stone-200 transition-colors"
             >
               ← Wstecz
             </button>
@@ -342,7 +342,7 @@ export default function LetterSelectFlow() {
           ) : (
             <button
               onClick={handleConfirm}
-              className="bg-gold hover:bg-yellow-600 text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
+              className="bg-forest hover:bg-forest-dark text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
             >
               ✅ Potwierdź wybór
             </button>

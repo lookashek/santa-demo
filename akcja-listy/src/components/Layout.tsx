@@ -5,7 +5,7 @@ export default function Layout() {
     <div className="min-h-screen flex flex-col">
       <header className="bg-forest-dark text-white px-6 py-4 shadow-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <NavLink to="/" className="text-xl font-bold text-gold">
+          <NavLink to="/" className="text-xl font-bold text-white">
             Święty Mikołaj dla Seniora
           </NavLink>
           <nav className="flex items-center gap-6">
@@ -13,7 +13,7 @@ export default function Layout() {
               to="/"
               end
               className={({ isActive }) =>
-                isActive ? 'text-gold font-semibold' : 'text-white/80 hover:text-gold transition-colors'
+                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
               }
             >
               Strona główna
@@ -21,7 +21,7 @@ export default function Layout() {
             <NavLink
               to="/listy"
               className={({ isActive }) =>
-                isActive ? 'text-gold font-semibold' : 'text-white/80 hover:text-gold transition-colors'
+                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
               }
             >
               Listy
@@ -29,7 +29,7 @@ export default function Layout() {
             <NavLink
               to="/galeria"
               className={({ isActive }) =>
-                isActive ? 'text-gold font-semibold' : 'text-white/80 hover:text-gold transition-colors'
+                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
               }
             >
               Galeria
@@ -37,7 +37,7 @@ export default function Layout() {
             <NavLink
               to="/mikolaj"
               className={({ isActive }) =>
-                isActive ? 'text-gold font-semibold' : 'text-white/80 hover:text-gold transition-colors'
+                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
               }
             >
               Moje listy
@@ -45,7 +45,7 @@ export default function Layout() {
             <NavLink
               to="/admin"
               className={({ isActive }) =>
-                isActive ? 'text-gold font-semibold' : 'text-white/80 hover:text-gold transition-colors'
+                isActive ? 'text-white font-semibold underline' : 'text-white/80 hover:text-white transition-colors'
               }
             >
               Admin

@@ -95,7 +95,7 @@ export default function SantaLogin() {
       </div>
 
       {/* Demo shortcuts */}
-      <div className="bg-sand rounded-xl border border-gold-light p-4">
+      <div className="bg-sand rounded-xl border border-stone-200 p-4">
         <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-3">
           ⚡ Szybki dostęp (demo)
         </p>
@@ -104,7 +104,7 @@ export default function SantaLogin() {
             <button
               key={s.id}
               onClick={() => handleDemo(s.id)}
-              className="w-full text-left px-3 py-2 rounded-lg bg-warm-white hover:bg-gold-light border border-stone-200 transition-colors"
+              className="w-full text-left px-3 py-2 rounded-lg bg-warm-white hover:bg-stone-100 border border-stone-200 transition-colors"
             >
               <span className="text-sm font-medium text-forest-dark">{s.label}</span>
               <span className="text-xs text-stone-400 ml-2">— {s.desc}</span>

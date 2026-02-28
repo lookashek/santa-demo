@@ -121,7 +121,7 @@ export default function AdminActions() {
               </div>
               <button
                 onClick={() => setEditing(editing?.id === action.id ? null : action)}
-                className="bg-sand hover:bg-gold-light text-forest-dark font-medium px-4 py-2 rounded-lg border border-stone-200 transition-colors text-sm flex-shrink-0"
+                className="bg-sand hover:bg-stone-200 text-stone-700 font-medium px-4 py-2 rounded-lg border border-stone-200 transition-colors text-sm flex-shrink-0"
               >
                 {editing?.id === action.id ? 'Zwiń' : 'Edytuj'}
               </button>

@@ -25,6 +25,16 @@ const FAQ_ITEMS = [
   },
 ];
 
+const HARMONOGRAM = [
+  { date: '27.10.2025', desc: 'publikacja listów na stronie' },
+  { date: '10–12.11.2025', desc: 'potwierdzenie realizacji paczki' },
+  { date: '16.11.2025', desc: 'powtórna publikacja listów niezrealizowanych' },
+  { date: 'DO 23.11.2025', desc: 'potwierdzenie realizacji listów, które powróciły' },
+  { date: 'DO 30.11.2025', desc: 'dostarczenie paczek do placówek' },
+  { date: '06.12.2025–24.12.2025', desc: 'finały w placówkach' },
+  { date: '06.12.2025–15.01.2026', desc: 'fotorelacje od placówek' },
+];
+
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const availableCount = getAvailableLetters().length;
@@ -34,7 +44,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="bg-forest-dark text-white py-24 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Akcja Listy 2025
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-4">
@@ -46,7 +56,7 @@ export default function HomePage() {
           </p>
           <Link
             to="/listy"
-            className="bg-gold hover:bg-yellow-600 text-white font-medium px-8 py-3 rounded-lg transition-colors text-lg inline-block"
+            className="bg-white hover:bg-stone-100 text-forest-dark font-medium px-8 py-3 rounded-lg transition-colors text-lg inline-block"
           >
             Zobacz listy
           </Link>
@@ -93,6 +103,25 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold text-stone-900 mb-3">{item.title}</h3>
                 <p className="text-base text-stone-500">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Harmonogram */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-semibold text-stone-900 mb-8">
+            Harmonogram
+          </h2>
+          <div className="space-y-3">
+            {HARMONOGRAM.map((item, i) => (
+              <div key={i} className="flex items-baseline gap-3">
+                <span className="text-forest font-semibold text-sm whitespace-nowrap min-w-[11rem]">
+                  {item.date}
+                </span>
+                <span className="text-stone-700 text-sm">— {item.desc}</span>
               </div>
             ))}
           </div>

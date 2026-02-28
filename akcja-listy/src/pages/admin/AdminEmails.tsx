@@ -49,7 +49,7 @@ function EditModal({ tpl, onClose }: { tpl: EmailTemplate; onClose: (msg?: strin
           <p className="text-xs font-medium text-stone-500 mb-2">Dostępne parametry:</p>
           <div className="flex flex-wrap gap-1.5">
             {tpl.availableParams.map((p) => (
-              <span key={p} className="font-mono text-xs bg-stone-200 text-stone-700 px-2 py-0.5 rounded cursor-pointer hover:bg-gold-light"
+              <span key={p} className="font-mono text-xs bg-stone-200 text-stone-700 px-2 py-0.5 rounded cursor-pointer hover:bg-stone-300"
                 onClick={() => setForm((f) => ({ ...f, body: f.body + `{${p}}` }))}>
                 {`{${p}}`}
               </span>

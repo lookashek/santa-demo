@@ -34,7 +34,7 @@ export function ConfirmDialog({
         <div className="flex gap-2 justify-end">
           <button
             onClick={onCancel}
-            className="bg-sand hover:bg-gold-light text-forest-dark font-medium px-5 py-2 rounded-lg border border-stone-200 transition-colors text-sm"
+            className="bg-sand hover:bg-stone-200 text-stone-700 font-medium px-5 py-2 rounded-lg border border-stone-200 transition-colors text-sm"
           >
             Anuluj
           </button>
