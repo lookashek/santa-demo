@@ -2,24 +2,24 @@ import { useState } from 'react';
 import { getEmailTemplates, updateEmailTemplate } from '../../data/db-helpers';
 import { santas, letters } from '../../data/mock-db';
 import type { EmailTemplate } from '../../data/models';
+import { Toast } from '../../components/Toast';
 
-function EditModal({ tpl, onClose }: { tpl: EmailTemplate; onClose: () => void }) {
+function EditModal({ tpl, onClose }: { tpl: EmailTemplate; onClose: (msg?: string) => void }) {
   const [form, setForm] = useState({ name: tpl.name, subject: tpl.subject, body: tpl.body });
 
   const handleSave = () => {
     updateEmailTemplate(tpl.id, form);
-    alert('Szablon zapisany.');
-    onClose();
+    onClose('Szablon zapisany.');
   };
 
   const inputCls = 'w-full px-3 py-2 rounded-lg border border-stone-300 bg-white text-stone-900 focus:outline-none focus:ring-2 focus:ring-forest/30 text-sm';
 
   return (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center" onClick={onClose}>
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center" onClick={() => onClose()}>
       <div className="bg-white rounded-2xl shadow-xl max-w-2xl w-full mx-4 p-6 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-semibold text-stone-900">Edycja szablonu</h3>
-          <button onClick={onClose} className="text-stone-400 hover:text-stone-600 text-2xl leading-none">×</button>
+          <button onClick={() => onClose()} className="text-stone-400 hover:text-stone-600 text-2xl leading-none">×</button>
         </div>
 
         <p className="text-xs text-stone-400 mb-3">Typ: <span className="font-mono">{tpl.type}</span></p>
@@ -62,7 +62,7 @@ function EditModal({ tpl, onClose }: { tpl: EmailTemplate; onClose: () => void }
           <button onClick={handleSave} className="bg-forest hover:bg-forest-dark text-white font-medium px-5 py-2 rounded-lg transition-colors text-sm">
             Zapisz
           </button>
-          <button onClick={onClose} className="bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium px-5 py-2 rounded-lg transition-colors text-sm">
+          <button onClick={() => onClose()} className="bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium px-5 py-2 rounded-lg transition-colors text-sm">
             Anuluj
           </button>
         </div>
@@ -71,18 +71,18 @@ function EditModal({ tpl, onClose }: { tpl: EmailTemplate; onClose: () => void }
   );
 }
 
-function SendModal({ tpl, onClose }: { tpl: EmailTemplate; onClose: () => void }) {
+function SendModal({ tpl, onClose }: { tpl: EmailTemplate; onClose: (msg?: string) => void }) {
   const [santaId, setSantaId] = useState('');
   const [letterId, setLetterId] = useState('');
 
   const santaLetters = santaId ? letters.filter((l) => l.santaId === santaId) : [];
 
   return (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center" onClick={onClose}>
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center" onClick={() => onClose()}>
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full mx-4 p-6" onClick={(e) => e.stopPropagation()}>
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-semibold text-stone-900">Wyślij: {tpl.name}</h3>
-          <button onClick={onClose} className="text-stone-400 hover:text-stone-600 text-2xl leading-none">×</button>
+          <button onClick={() => onClose()} className="text-stone-400 hover:text-stone-600 text-2xl leading-none">×</button>
         </div>
 
         <div className="space-y-3">
@@ -119,13 +119,13 @@ function SendModal({ tpl, onClose }: { tpl: EmailTemplate; onClose: () => void }
 
         <div className="flex gap-2 mt-5">
           <button
-            onClick={() => { alert('Wiadomość wysłana (symulacja) ✉️'); onClose(); }}
+            onClick={() => onClose('Wiadomość wysłana (symulacja) ✉️')}
             disabled={!santaId}
             className="bg-forest hover:bg-forest-dark disabled:opacity-50 text-white font-medium px-5 py-2 rounded-lg transition-colors text-sm"
           >
             Wyślij
           </button>
-          <button onClick={onClose} className="bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium px-5 py-2 rounded-lg transition-colors text-sm">
+          <button onClick={() => onClose()} className="bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium px-5 py-2 rounded-lg transition-colors text-sm">
             Anuluj
           </button>
         </div>
@@ -138,6 +138,7 @@ export default function AdminEmails() {
   const templates = getEmailTemplates();
   const [editing, setEditing] = useState<EmailTemplate | null>(null);
   const [sending, setSending] = useState<EmailTemplate | null>(null);
+  const [toast, setToast] = useState('');
 
   return (
     <div>
@@ -174,8 +175,10 @@ export default function AdminEmails() {
         </table>
       </div>
 
-      {editing && <EditModal tpl={editing} onClose={() => setEditing(null)} />}
-      {sending && <SendModal tpl={sending} onClose={() => setSending(null)} />}
+      {editing && <EditModal tpl={editing} onClose={(msg) => { setEditing(null); if (msg) setToast(msg); }} />}
+      {sending && <SendModal tpl={sending} onClose={(msg) => { setSending(null); if (msg) setToast(msg); }} />}
+
+      {toast && <Toast message={toast} onDismiss={() => setToast('')} />}
     </div>
   );
 }
