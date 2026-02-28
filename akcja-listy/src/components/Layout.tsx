@@ -6,7 +6,7 @@ export default function Layout() {
       <header className="bg-forest-dark text-white px-6 py-4 shadow-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <NavLink to="/" className="text-xl font-bold text-gold">
-            🎄 Święty Mikołaj dla Seniora
+            Święty Mikołaj dla Seniora
           </NavLink>
           <nav className="flex items-center gap-6">
             <NavLink
@@ -24,7 +24,7 @@ export default function Layout() {
                 isActive ? 'text-gold font-semibold' : 'text-white/80 hover:text-gold transition-colors'
               }
             >
-              ✉️ Listy
+              Listy
             </NavLink>
             <NavLink
               to="/galeria"
@@ -32,7 +32,7 @@ export default function Layout() {
                 isActive ? 'text-gold font-semibold' : 'text-white/80 hover:text-gold transition-colors'
               }
             >
-              📸 Galeria
+              Galeria
             </NavLink>
             <NavLink
               to="/mikolaj"
@@ -40,7 +40,7 @@ export default function Layout() {
                 isActive ? 'text-gold font-semibold' : 'text-white/80 hover:text-gold transition-colors'
               }
             >
-              🎅 Moje listy
+              Moje listy
             </NavLink>
             <NavLink
               to="/admin"
@@ -48,7 +48,7 @@ export default function Layout() {
                 isActive ? 'text-gold font-semibold' : 'text-white/80 hover:text-gold transition-colors'
               }
             >
-              ⚙️ Admin
+              Admin
             </NavLink>
           </nav>
         </div>

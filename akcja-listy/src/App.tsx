@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { SantaProvider } from './context/SantaContext';
 import Layout from './components/Layout';
+import AdminLayout from './components/AdminLayout';
 import HomePage from './pages/public/HomePage';
 import LettersPage from './pages/public/LettersPage';
 import GalleryPage from './pages/public/GalleryPage';
@@ -16,6 +18,7 @@ import AdminUsers from './pages/admin/AdminUsers';
 
 function App() {
   return (
+    <SantaProvider>
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
@@ -29,7 +32,10 @@ function App() {
           <Route path="/mikolaj" element={<SantaLogin />} />
           <Route path="/mikolaj/panel" element={<SantaDashboard />} />
 
-          {/* Panel Administratora */}
+        </Route>
+
+        {/* Panel Administratora — własny layout z sidebariem */}
+        <Route element={<AdminLayout />}>
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/placowki" element={<AdminFacilities />} />
           <Route path="/admin/listy" element={<AdminLetters />} />
@@ -40,6 +46,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </SantaProvider>
   );
 }
 

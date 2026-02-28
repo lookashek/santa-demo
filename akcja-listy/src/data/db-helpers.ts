@@ -1,4 +1,4 @@
-import { Action, Facility, Letter, LetterStatus, Santa, EmailTemplate } from './models';
+import type { Action, Facility, Letter, LetterStatus, Santa, EmailTemplate } from './models';
 import { actions, facilities, letters, santas, emailTemplates } from './mock-db';
 
 // ============================================================
