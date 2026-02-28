@@ -1,4 +1,4 @@
-import { letters, santas } from '../../data/mock-db';
+import { letters } from '../../data/mock-db';
 import { getActiveAction, getActiveFacilities } from '../../data/db-helpers';
 
 export default function AdminDashboard() {
