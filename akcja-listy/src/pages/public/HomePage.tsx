@@ -78,15 +78,16 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { step: '1', title: 'Wybierz list seniora', desc: 'Przeglądaj listy i znajdź tego, komu chcesz pomóc.' },
-              { step: '2', title: 'Przygotuj paczkę', desc: 'Skompletuj prezenty zgodnie z życzeniami seniora.' },
-              { step: '3', title: 'Wyślij lub dostarcz', desc: 'Wyślij kurierem lub dostarcz osobiście do placówki.' },
-              { step: '4', title: 'Podaruj radość!', desc: 'Senior otrzyma paczkę i poczuje się wyjątkowo.' },
+              { icon: '✉️', step: '1', title: 'Wybierz list seniora', desc: 'Przeglądaj listy i znajdź tego, komu chcesz pomóc.' },
+              { icon: '🎁', step: '2', title: 'Przygotuj paczkę', desc: 'Skompletuj prezenty zgodnie z życzeniami seniora.' },
+              { icon: '📦', step: '3', title: 'Wyślij lub dostarcz', desc: 'Wyślij kurierem lub dostarcz osobiście do placówki.' },
+              { icon: '😊', step: '4', title: 'Podaruj radość!', desc: 'Senior otrzyma paczkę i poczuje się wyjątkowo.' },
             ].map((item) => (
               <div
                 key={item.step}
                 className="bg-warm-white rounded-xl shadow-sm border border-stone-200 p-6 text-center"
               >
+                <div className="text-4xl mb-3">{item.icon}</div>
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-white text-lg font-bold mb-4">
                   {item.step}
                 </div>
