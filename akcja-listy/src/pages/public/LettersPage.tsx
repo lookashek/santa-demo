@@ -119,7 +119,7 @@ export default function LettersPage() {
                 onClick={() => setModalLetter(letter)}
                 className={`bg-warm-white rounded-xl shadow-sm border border-stone-200 p-4 transition-all cursor-pointer ${
                   isAvailable
-                    ? 'hover:shadow-md hover:border-gold-light'
+                    ? 'hover:shadow-md hover:border-stone-400'
                     : 'opacity-60'
                 }`}
               >

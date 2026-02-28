@@ -142,7 +142,7 @@ function LetterCard({ letter, turnDeadline }: { letter: Letter; turnDeadline?: s
                 </button>
                 <button
                   onClick={() => setShowConfirm(false)}
-                  className="bg-sand hover:bg-gold-light text-forest-dark font-medium px-4 py-1.5 rounded-lg border border-stone-200 transition-colors text-sm"
+                  className="bg-sand hover:bg-stone-200 text-stone-700 font-medium px-4 py-1.5 rounded-lg border border-stone-200 transition-colors text-sm"
                 >
                   Anuluj
                 </button>
@@ -154,7 +154,7 @@ function LetterCard({ letter, turnDeadline }: { letter: Letter; turnDeadline?: s
             {/* Dodaj śledzenie */}
             <button
               onClick={() => { setShowTracking(!showTracking); setShowConfirm(false); }}
-              className="bg-sand hover:bg-gold-light text-forest-dark font-medium px-4 py-2 rounded-lg border border-stone-200 transition-colors text-sm"
+              className="bg-sand hover:bg-stone-200 text-stone-700 font-medium px-4 py-2 rounded-lg border border-stone-200 transition-colors text-sm"
             >
               📦 Dodaj śledzenie
             </button>
@@ -215,7 +215,7 @@ function LetterCard({ letter, turnDeadline }: { letter: Letter; turnDeadline?: s
                 </button>
                 <button
                   onClick={() => setShowTracking(false)}
-                  className="bg-sand hover:bg-gold-light text-forest-dark font-medium px-4 py-1.5 rounded-lg border border-stone-200 transition-colors text-sm"
+                  className="bg-sand hover:bg-stone-200 text-stone-700 font-medium px-4 py-1.5 rounded-lg border border-stone-200 transition-colors text-sm"
                 >
                   Anuluj
                 </button>
@@ -276,7 +276,7 @@ export default function SantaDashboard() {
         </div>
         <button
           onClick={handleLogout}
-          className="bg-sand hover:bg-gold-light text-forest-dark font-medium px-4 py-2 rounded-lg border border-stone-200 transition-colors text-sm flex-shrink-0"
+          className="bg-sand hover:bg-stone-200 text-stone-700 font-medium px-4 py-2 rounded-lg border border-stone-200 transition-colors text-sm flex-shrink-0"
         >
           Wyloguj
         </button>

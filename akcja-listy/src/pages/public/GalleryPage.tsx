@@ -62,7 +62,7 @@ export default function GalleryPage() {
             <div
               key={photo.id}
               onClick={() => setLightbox(photo)}
-              className="bg-warm-white rounded-xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md hover:border-gold-light transition-all cursor-pointer"
+              className="bg-warm-white rounded-xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md hover:border-stone-400 transition-all cursor-pointer"
             >
               <img
                 src={photo.url}

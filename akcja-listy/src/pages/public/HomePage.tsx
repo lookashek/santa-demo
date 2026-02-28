@@ -25,28 +25,38 @@ const FAQ_ITEMS = [
   },
 ];
 
+const HARMONOGRAM = [
+  { date: '27.10.2025', desc: 'publikacja listów na stronie' },
+  { date: '10–12.11.2025', desc: 'potwierdzenie realizacji paczki' },
+  { date: '16.11.2025', desc: 'powtórna publikacja listów niezrealizowanych' },
+  { date: 'DO 23.11.2025', desc: 'potwierdzenie realizacji listów, które powróciły' },
+  { date: 'DO 30.11.2025', desc: 'dostarczenie paczek do placówek' },
+  { date: '06.12.2025–24.12.2025', desc: 'finały w placówkach' },
+  { date: '06.12.2025–15.01.2026', desc: 'fotorelacje od placówek' },
+];
+
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const availableCount = getAvailableLetters().length;
 
   return (
-    <div>
+    <div className="bg-white">
       {/* Hero */}
-      <section className="bg-forest-dark text-white py-24 px-4">
+      <section className="py-20 px-4 border-b border-stone-100">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-forest-dark mb-6">
             Akcja Listy 2025
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-4">
+          <p className="text-xl text-stone-600 max-w-2xl mx-auto mb-4">
             Seniorzy z domów opieki napisali listy do Świętego Mikołaja. Pomóż spełnić ich
             marzenia — wybierz list i przygotuj paczkę!
           </p>
-          <p className="text-white/70 mb-10">
+          <p className="text-stone-400 mb-10">
             Każdy może zostać Mikołajem. To prostsze niż myślisz.
           </p>
           <Link
             to="/listy"
-            className="bg-gold hover:bg-yellow-600 text-white font-medium px-8 py-3 rounded-lg transition-colors text-lg inline-block"
+            className="bg-forest hover:bg-forest-dark text-white font-medium px-8 py-3 rounded-lg transition-colors text-lg inline-block"
           >
             Zobacz listy
           </Link>
@@ -54,26 +64,26 @@ export default function HomePage() {
       </section>
 
       {/* Licznik */}
-      <section className="bg-sand py-12 px-4 text-center">
+      <section className="py-12 px-4 text-center border-b border-stone-100">
         {availableCount > 0 ? (
           <div>
-            <p className="text-stone-600 text-lg mb-2">Czeka na Ciebie</p>
+            <p className="text-stone-500 text-lg mb-2">Czeka na Ciebie</p>
             <p className="text-6xl font-bold text-forest mb-2">{availableCount}</p>
-            <p className="text-2xl font-semibold text-forest-dark">
+            <p className="text-2xl font-semibold text-stone-700">
               listów do realizacji
             </p>
           </div>
         ) : (
-          <p className="text-2xl font-semibold text-forest-dark">
+          <p className="text-2xl font-semibold text-stone-700">
             ✅ Wszystkie listy zostały wybrane! Dziękujemy!
           </p>
         )}
       </section>
 
       {/* Jak to działa */}
-      <section className="py-16 px-4 bg-cream">
+      <section className="py-16 px-4 border-b border-stone-100">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-semibold text-forest-dark text-center mb-10">
+          <h2 className="text-2xl font-semibold text-stone-900 text-center mb-10">
             Jak to działa?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -85,7 +95,7 @@ export default function HomePage() {
             ].map((item) => (
               <div
                 key={item.step}
-                className="bg-warm-white rounded-xl shadow-sm border border-stone-200 p-6 text-center"
+                className="bg-white rounded-xl shadow-sm border border-stone-200 p-6 text-center"
               >
                 <div className="text-4xl mb-3">{item.icon}</div>
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-white text-lg font-bold mb-4">
@@ -99,17 +109,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 px-4 bg-warm-white">
+      {/* Harmonogram */}
+      <section className="py-16 px-4 border-b border-stone-100">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-semibold text-forest-dark text-center mb-10">
+          <h2 className="text-2xl font-semibold text-stone-900 mb-8">
+            Harmonogram
+          </h2>
+          <div className="space-y-3">
+            {HARMONOGRAM.map((item, i) => (
+              <div key={i} className="flex items-baseline gap-3">
+                <span className="text-forest font-semibold text-sm whitespace-nowrap min-w-[11rem]">
+                  {item.date}
+                </span>
+                <span className="text-stone-700 text-sm">— {item.desc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-4 border-b border-stone-100">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-semibold text-stone-900 text-center mb-10">
             Często zadawane pytania
           </h2>
           <div className="space-y-3">
             {FAQ_ITEMS.map((item, i) => (
               <div key={i} className="border border-stone-200 rounded-lg overflow-hidden">
                 <button
-                  className="w-full text-left px-5 py-4 font-medium text-stone-900 hover:bg-sand transition-colors flex justify-between items-center"
+                  className="w-full text-left px-5 py-4 font-medium text-stone-900 hover:bg-stone-50 transition-colors flex justify-between items-center"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
                   <span>{item.question}</span>
@@ -129,16 +158,16 @@ export default function HomePage() {
       </section>
 
       {/* Sponsorzy */}
-      <section className="py-16 px-4 bg-sand">
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-semibold text-forest-dark text-center mb-10">
+          <h2 className="text-2xl font-semibold text-stone-900 text-center mb-10">
             Nasi sponsorzy
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
-                className="bg-stone-200 rounded-xl h-20 flex items-center justify-center text-stone-400 text-xs font-medium"
+                className="bg-stone-100 rounded-xl h-20 flex items-center justify-center text-stone-400 text-xs font-medium"
               >
                 Logo sponsora
               </div>
