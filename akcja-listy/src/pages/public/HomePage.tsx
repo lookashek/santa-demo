@@ -173,19 +173,26 @@ export default function HomePage() {
         <h2 className="text-2xl font-semibold text-stone-900 text-center mb-10">
           Nasi sponsorzy
         </h2>
-        <div className="overflow-hidden relative">
-          {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+        {/*
+          Each logo card: 170px wide + 12px margin each side = 194px per slot.
+          6 visible slots = 1164px viewport. One full set (8 logos) = 8 × 194 = 1552px.
+          Animation translates by -50% of the doubled track (16 logos), which equals
+          exactly one full set — so the second identical set snaps seamlessly back to start.
+        */}
+        <div className="mx-auto overflow-hidden relative" style={{ maxWidth: 1164 }}>
+          <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
             style={{ background: 'linear-gradient(to right, white, transparent)' }} />
-          <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+          <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
             style={{ background: 'linear-gradient(to left, white, transparent)' }} />
-          {/* Scrolling track */}
-          <div className="flex" style={{ animation: 'sponsorScroll 28s linear infinite' }}>
+          <div
+            className="flex"
+            style={{ animation: 'sponsorScroll 24s linear infinite', width: 'max-content' }}
+          >
             {[...SPONSORS, ...SPONSORS].map((sponsor, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 mx-4 bg-stone-50 rounded-xl border border-stone-100 flex items-center justify-center"
-                style={{ width: 200, height: 84 }}
+                className="flex-shrink-0 bg-stone-50 rounded-xl border border-stone-100 flex items-center justify-center"
+                style={{ width: 170, height: 80, margin: '0 12px' }}
               >
                 <img
                   src={sponsor.logo}
