@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
+  <!-- Fundacja Serce - organizacja charytatywna -->
+  <rect width="240" height="100" fill="#f8f8f8" rx="10"/>
+  <rect width="240" height="100" fill="none" stroke="#e53935" stroke-width="2.5" rx="10"/>
+  <!-- Heart icon -->
+  <path d="M50,58 C50,38 30,28 30,48 C30,65 50,75 50,75 C50,75 70,65 70,48 C70,28 50,38 50,58Z" fill="#e53935"/>
+  <!-- Pulse line inside heart area -->
+  <polyline points="34,50 40,50 43,42 46,58 50,45 54,55 57,50 66,50" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Name -->
+  <text x="148" y="38" font-family="Georgia, serif" font-size="14" fill="#b71c1c" text-anchor="middle" letter-spacing="1">FUNDACJA</text>
+  <text x="148" y="62" font-family="Georgia, serif" font-size="30" fill="#e53935" text-anchor="middle" font-weight="bold">Serce</text>
+  <rect x="93" y="70" width="110" height="1.5" fill="#ef9a9a"/>
+  <text x="148" y="83" font-family="Arial, sans-serif" font-size="9" fill="#ef9a9a" text-anchor="middle" letter-spacing="1.5">POMAGAMY · ŁĄCZYMY · DBAMY</text>
+</svg>

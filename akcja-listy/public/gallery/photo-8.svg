@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565c0"/>
+      <stop offset="100%" style="stop-color:#0a2a6e"/>
+    </linearGradient>
+    <linearGradient id="photoFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff9c4"/>
+      <stop offset="100%" style="stop-color:#ffe082"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg8)"/>
+
+  <!-- Snowflakes background -->
+  <text x="60" y="80" font-size="22" fill="white" opacity="0.2" font-family="serif">❄</text>
+  <text x="700" y="60" font-size="18" fill="white" opacity="0.2" font-family="serif">❄</text>
+  <text x="200" y="50" font-size="15" fill="white" opacity="0.15" font-family="serif">❄</text>
+  <text x="550" y="80" font-size="20" fill="white" opacity="0.2" font-family="serif">❄</text>
+  <text x="120" y="530" font-size="18" fill="white" opacity="0.15" font-family="serif">❄</text>
+  <text x="650" y="540" font-size="22" fill="white" opacity="0.2" font-family="serif">❄</text>
+  <text x="350" y="40" font-size="16" fill="white" opacity="0.15" font-family="serif">❄</text>
+  <text x="730" y="400" font-size="14" fill="white" opacity="0.15" font-family="serif">❄</text>
+
+  <!-- Photo frame 1 (top-left) - rotated slightly -->
+  <g transform="rotate(-8,185,190)">
+    <rect x="85" y="100" width="200" height="180" fill="url(#photoFrame)" rx="4"/>
+    <rect x="95" y="110" width="180" height="150" fill="#c62828" rx="2"/>
+    <!-- Mini scene: gift giving -->
+    <circle cx="145" cy="155" r="18" fill="#f5cba7"/>
+    <ellipse cx="145" cy="185" rx="20" ry="25" fill="#1565c0"/>
+    <circle cx="200" cy="158" r="18" fill="#d7ccc8"/>
+    <ellipse cx="200" cy="188" rx="20" ry="25" fill="#4a148c"/>
+    <rect x="165" y="195" width="30" height="22" fill="#f9a825" rx="2"/>
+    <rect x="178" y="195" width="6" height="22" fill="#c62828"/>
+    <rect x="165" y="204" width="30" height="5" fill="#c62828"/>
+    <!-- Caption strip -->
+    <rect x="95" y="250" width="180" height="10" fill="white" opacity="0.8"/>
+    <text x="185" y="258" font-size="7" fill="#333" text-anchor="middle" font-family="sans-serif">Akcja Listy 2024</text>
+  </g>
+
+  <!-- Photo frame 2 (top-right) - rotated other way -->
+  <g transform="rotate(6,615,185)">
+    <rect x="515" y="95" width="200" height="180" fill="url(#photoFrame)" rx="4"/>
+    <rect x="525" y="105" width="180" height="150" fill="#1b5e20" rx="2"/>
+    <!-- Mini scene: Christmas tree -->
+    <polygon points="615,120 565,185 665,185" fill="#2e7d32"/>
+    <polygon points="615,145 555,210 675,210" fill="#388e3c"/>
+    <rect x="605" y="208" width="20" height="15" fill="#795548"/>
+    <!-- Ornaments -->
+    <circle cx="585" cy="170" r="7" fill="#e53935"/>
+    <circle cx="645" cy="172" r="7" fill="#f9a825"/>
+    <circle cx="590" cy="200" r="7" fill="#1565c0"/>
+    <circle cx="640" cy="197" r="7" fill="#9c27b0"/>
+    <!-- Star -->
+    <polygon points="615,113 618,122 627,122 620,128 623,137 615,131 607,137 610,128 603,122 612,122" fill="#f9a825"/>
+    <!-- Caption -->
+    <rect x="525" y="245" width="180" height="10" fill="white" opacity="0.8"/>
+    <text x="615" y="253" font-size="7" fill="#333" text-anchor="middle" font-family="sans-serif">Choinka 2024</text>
+  </g>
+
+  <!-- Photo frame 3 (center, large, slightly tilted) -->
+  <g transform="rotate(-3,400,340)">
+    <rect x="255" y="200" width="290" height="245" fill="url(#photoFrame)" rx="5"/>
+    <rect x="268" y="213" width="264" height="205" fill="#880e4f" rx="3"/>
+    <!-- Mini scene: group of seniors -->
+    <!-- Table -->
+    <ellipse cx="400" cy="360" rx="100" ry="30" fill="#5d4037"/>
+    <!-- People -->
+    <circle cx="330" cy="310" r="22" fill="#f5cba7"/>
+    <ellipse cx="330" cy="343" rx="24" ry="30" fill="#283593"/>
+    <circle cx="400" cy="300" r="24" fill="#d7ccc8"/>
+    <ellipse cx="400" cy="335" rx="26" ry="32" fill="#880e4f"/>
+    <circle cx="470" cy="308" r="22" fill="#bcaaa4"/>
+    <ellipse cx="470" cy="341" rx="24" ry="30" fill="#1b5e20"/>
+    <!-- Happy faces -->
+    <path d="M323,318 Q330,326 337,318" stroke="#8b4513" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M393,308 Q400,316 407,308" stroke="#8b4513" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M463,316 Q470,324 477,316" stroke="#8b4513" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Cake on table -->
+    <ellipse cx="400" cy="358" rx="30" ry="10" fill="#f48fb1"/>
+    <ellipse cx="400" cy="350" rx="30" ry="10" fill="#e91e63"/>
+    <!-- Caption -->
+    <rect x="268" y="408" width="264" height="10" fill="white" opacity="0.85"/>
+    <text x="400" y="416" font-size="8" fill="#333" text-anchor="middle" font-family="sans-serif">Wspólna uroczystość 2024</text>
+  </g>
+
+  <!-- Photo frame 4 (bottom-left) -->
+  <g transform="rotate(10,155,430)">
+    <rect x="60" y="355" width="190" height="150" fill="url(#photoFrame)" rx="4"/>
+    <rect x="70" y="365" width="170" height="120" fill="#e65100" rx="2"/>
+    <!-- Mini scene: volunteers with gifts -->
+    <circle cx="120" cy="400" r="18" fill="#f5cba7"/>
+    <ellipse cx="120" cy="428" rx="20" ry="24" fill="#c62828"/>
+    <circle cx="175" cy="402" r="18" fill="#d7ccc8"/>
+    <ellipse cx="175" cy="430" rx="20" ry="24" fill="#1b5e20"/>
+    <!-- Gifts between them -->
+    <rect x="140" y="415" width="22" height="18" fill="#9c27b0" rx="2"/>
+    <rect x="148" y="415" width="6" height="18" fill="#f9a825"/>
+    <rect x="140" y="422" width="22" height="5" fill="#f9a825"/>
+    <!-- Caption -->
+    <rect x="70" y="475" width="170" height="10" fill="white" opacity="0.8"/>
+    <text x="155" y="483" font-size="7" fill="#333" text-anchor="middle" font-family="sans-serif">Wolontariusze 2024</text>
+  </g>
+
+  <!-- Photo frame 5 (bottom-right) -->
+  <g transform="rotate(-7,645,430)">
+    <rect x="550" y="360" width="190" height="150" fill="url(#photoFrame)" rx="4"/>
+    <rect x="560" y="370" width="170" height="120" fill="#006064" rx="2"/>
+    <!-- Mini scene: letters/notes -->
+    <rect x="590" y="385" width="55" height="45" fill="white" rx="3" transform="rotate(-5,617,407)"/>
+    <line x1="598" y1="395" x2="638" y2="395" stroke="#ccc" stroke-width="2"/>
+    <line x1="598" y1="402" x2="638" y2="402" stroke="#ccc" stroke-width="2"/>
+    <line x1="598" y1="409" x2="625" y2="409" stroke="#ccc" stroke-width="2"/>
+    <!-- Pen/pencil -->
+    <rect x="638" y="388" width="8" height="40" fill="#f9a825" rx="2" transform="rotate(25,642,408)"/>
+    <!-- Heart on letter -->
+    <path d="M612,425 C612,421 616,419 618,423 C620,419 624,421 624,425 C624,429 618,434 618,434 C618,434 612,429 612,425Z" fill="#c62828"/>
+    <!-- Caption -->
+    <rect x="560" y="480" width="170" height="10" fill="white" opacity="0.8"/>
+    <text x="645" y="488" font-size="7" fill="#333" text-anchor="middle" font-family="sans-serif">Listy seniorów 2024</text>
+  </g>
+
+  <!-- Floating hearts between photos -->
+  <path d="M398,130 C398,122 406,118 410,126 C414,118 422,122 422,130 C422,138 410,147 410,147 C410,147 398,138 398,130Z" fill="#e91e63" opacity="0.7"/>
+  <path d="M280,470 C280,464 286,461 289,467 C292,461 298,464 298,470 C298,476 289,482 289,482 C289,482 280,476 280,470Z" fill="#e91e63" opacity="0.6"/>
+  <path d="M502,468 C502,463 507,460 510,465 C513,460 518,463 518,468 C518,473 510,479 510,479 C510,479 502,473 502,468Z" fill="#e91e63" opacity="0.6"/>
+
+  <!-- "Wspomnienia" title at top -->
+  <text x="400" y="75" font-family="Georgia, serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold" opacity="0.9">Wspomnienia</text>
+  <text x="400" y="100" font-family="Georgia, serif" font-size="18" fill="#90caf9" text-anchor="middle">Akcja Listy 2024</text>
+
+  <!-- Text banner bottom -->
+  <rect x="160" y="505" width="480" height="65" fill="rgba(0,0,0,0.35)" rx="10"/>
+  <text x="400" y="531" font-family="Georgia, serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">Wspomnienia z akcji 2024</text>
+  <text x="400" y="555" font-family="Georgia, serif" font-size="16" fill="#90caf9" text-anchor="middle">DPS Złota Jesień · Grudzień 2024</text>
+
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="3" rx="8"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
+  <!-- SpeedEx - firma logistyczna -->
+  <rect width="240" height="100" fill="#e65100" rx="10"/>
+  <!-- Arrow / speed icon -->
+  <polygon points="20,38 60,38 60,28 82,50 60,72 60,62 20,62" fill="white" opacity="0.9"/>
+  <!-- Name -->
+  <text x="155" y="46" font-family="Impact, Arial Narrow, sans-serif" font-size="30" fill="white" text-anchor="middle" letter-spacing="1">SPEED</text>
+  <text x="155" y="70" font-family="Impact, Arial Narrow, sans-serif" font-size="30" fill="#ffccbc" text-anchor="middle" letter-spacing="3">EX</text>
+  <text x="155" y="86" font-family="Arial, sans-serif" font-size="9" fill="#ff8a65" text-anchor="middle" letter-spacing="2">LOGISTYKA · KURIER · MAGAZYN</text>
+</svg>
