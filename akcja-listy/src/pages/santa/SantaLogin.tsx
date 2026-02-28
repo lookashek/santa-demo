@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getSantaByEmail, getLetterByCode, getActiveAction } from '../../data/db-helpers';
-import { santas } from '../../data/mock-db';
 import { useSanta } from '../../context/SantaContext';
 
 const DEMO_SANTAS = [

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getLetterById, getFacilityById, selectLetter } from '../../data/db-helpers';
 import type { Santa } from '../../data/models';
 
@@ -43,7 +43,6 @@ function StepIndicator({ current }: { current: Step }) {
 
 export default function LetterSelectFlow() {
   const { letterId } = useParams<{ letterId: string }>();
-  const navigate = useNavigate();
 
   const letter = getLetterById(letterId ?? '');
   const facility = letter ? getFacilityById(letter.facilityId) : undefined;
