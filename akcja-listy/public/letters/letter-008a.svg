@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0.05" y2="1">
+      <stop offset="0%" stop-color="#fefaf2"/>
+      <stop offset="100%" stop-color="#f6edd8"/>
+    </linearGradient>
+    <filter id="roughen">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- Paper background -->
+  <rect width="400" height="600" fill="url(#paper)"/>
+  <!-- Subtle paper shadow edge -->
+  <rect x="0" y="0" width="4" height="600" fill="#e8d8b0" opacity="0.3"/>
+  <rect x="396" y="0" width="4" height="600" fill="#e8d8b0" opacity="0.3"/>
+
+  <!-- Ruled lines -->
+  <g stroke="#b8cce0" stroke-width="0.7" opacity="0.9">
+  <line x1="0" y1="100" x2="400" y2="100"/>
+  <line x1="0" y1="128" x2="400" y2="128"/>
+  <line x1="0" y1="156" x2="400" y2="156"/>
+  <line x1="0" y1="184" x2="400" y2="184"/>
+  <line x1="0" y1="212" x2="400" y2="212"/>
+  <line x1="0" y1="240" x2="400" y2="240"/>
+  <line x1="0" y1="268" x2="400" y2="268"/>
+  <line x1="0" y1="296" x2="400" y2="296"/>
+  <line x1="0" y1="324" x2="400" y2="324"/>
+  <line x1="0" y1="352" x2="400" y2="352"/>
+  <line x1="0" y1="380" x2="400" y2="380"/>
+  <line x1="0" y1="408" x2="400" y2="408"/>
+  <line x1="0" y1="436" x2="400" y2="436"/>
+  <line x1="0" y1="464" x2="400" y2="464"/>
+  <line x1="0" y1="492" x2="400" y2="492"/>
+  <line x1="0" y1="520" x2="400" y2="520"/>
+  <line x1="0" y1="548" x2="400" y2="548"/>
+  <line x1="0" y1="576" x2="400" y2="576"/>
+  </g>
+
+  <!-- Red margin line -->
+  <line x1="55" y1="0" x2="55" y2="600" stroke="#e08888" stroke-width="1.4" opacity="0.65"/>
+
+  <!-- Hole punches (optional, realistic touch) -->
+  <circle cx="20" cy="150" r="7" fill="none" stroke="#d0c0a0" stroke-width="1" opacity="0.5"/>
+  <circle cx="20" cy="300" r="7" fill="none" stroke="#d0c0a0" stroke-width="1" opacity="0.5"/>
+  <circle cx="20" cy="450" r="7" fill="none" stroke="#d0c0a0" stroke-width="1" opacity="0.5"/>
+
+  <!-- Letter content -->
+<text x="388" y="50" font-family="'Caveat', cursive, Georgia, serif" font-size="12.5" fill="#1c2440" text-anchor="end" opacity="0.85">Gdańsk, 20 listopada 2025</text>
+<text x="68" y="100" font-family="'Caveat', cursive, Georgia, serif" font-size="15" fill="#1c2440">Drogi Mikołaju,</text>
+<text x="68" y="128" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440"></text>
+<text x="68" y="156" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440">Nieczęsto piszę listy, ale dziś spróbuję.</text>
+<text x="68" y="184" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440">Moje życzenia (strona 1):</text>
+<text x="68" y="212" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440"></text>
+<text x="78" y="240" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440">– kapcie domowe (rozmiar 42)</text>
+<text x="78" y="268" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440">– szalik wełniany – lubię niebieski</text>
+<text x="78" y="296" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440">– herbatę owocową (wiele smaków)</text>
+<text x="78" y="324" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440">– słodycze – co Mikołaj uzna za stosowne</text>
+<text x="68" y="352" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440"></text>
+<text x="68" y="380" font-family="'Caveat', cursive, Georgia, serif" font-size="14" fill="#1c2440">Ciąg dalszy na następnej stronie...</text>
+<text x="80" y="480" font-family="'Caveat', cursive, Georgia, serif" font-size="13" fill="#1c2440" opacity="0.9">Ryszard K. (str. 1/2)</text>
+<text x="80" y="508" font-family="'Caveat', cursive, Georgia, serif" font-size="15" fill="#1c2440" opacity="0.9"></text>
+</svg>
