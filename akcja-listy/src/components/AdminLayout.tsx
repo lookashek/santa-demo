@@ -31,8 +31,8 @@ export default function AdminLayout() {
               end={item.end}
               className={({ isActive }) =>
                 isActive
-                  ? 'block bg-forest text-gold-light rounded-lg px-4 py-2.5 font-medium text-sm'
-                  : 'block text-white/70 hover:bg-forest hover:text-white rounded-lg px-4 py-2.5 transition-colors text-sm'
+                  ? 'block bg-forest text-gold-light rounded-lg px-4 py-2.5 font-medium text-base'
+                  : 'block text-white/70 hover:bg-forest hover:text-white rounded-lg px-4 py-2.5 transition-colors text-base'
               }
             >
               {item.label}
