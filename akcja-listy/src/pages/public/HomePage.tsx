@@ -35,7 +35,7 @@ export default function HomePage() {
       <section className="bg-forest-dark text-white py-24 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gold mb-6">
-            🎄 Akcja Listy 2025
+            Akcja Listy 2025
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-4">
             Seniorzy z domów opieki napisali listy do Świętego Mikołaja. Pomóż spełnić ich
@@ -48,7 +48,7 @@ export default function HomePage() {
             to="/listy"
             className="bg-gold hover:bg-yellow-600 text-white font-medium px-8 py-3 rounded-lg transition-colors text-lg inline-block"
           >
-            Zobacz listy ✉️
+            Zobacz listy
           </Link>
         </div>
       </section>
@@ -78,21 +78,20 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: '✉️', step: '1', title: 'Wybierz list seniora', desc: 'Przeglądaj listy i znajdź tego, komu chcesz pomóc.' },
-              { icon: '🎁', step: '2', title: 'Przygotuj paczkę', desc: 'Skompletuj prezenty zgodnie z życzeniami seniora.' },
-              { icon: '📦', step: '3', title: 'Wyślij lub dostarcz', desc: 'Wyślij kurierem lub dostarcz osobiście do placówki.' },
-              { icon: '😊', step: '4', title: 'Podaruj radość!', desc: 'Senior otrzyma paczkę i poczuje się wyjątkowo.' },
+              { step: '1', title: 'Wybierz list seniora', desc: 'Przeglądaj listy i znajdź tego, komu chcesz pomóc.' },
+              { step: '2', title: 'Przygotuj paczkę', desc: 'Skompletuj prezenty zgodnie z życzeniami seniora.' },
+              { step: '3', title: 'Wyślij lub dostarcz', desc: 'Wyślij kurierem lub dostarcz osobiście do placówki.' },
+              { step: '4', title: 'Podaruj radość!', desc: 'Senior otrzyma paczkę i poczuje się wyjątkowo.' },
             ].map((item) => (
               <div
                 key={item.step}
                 className="bg-warm-white rounded-xl shadow-sm border border-stone-200 p-6 text-center"
               >
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <div className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-forest text-white text-sm font-bold mb-3">
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-white text-lg font-bold mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-lg font-semibold text-stone-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-stone-500">{item.desc}</p>
+                <h3 className="text-xl font-semibold text-stone-900 mb-3">{item.title}</h3>
+                <p className="text-base text-stone-500">{item.desc}</p>
               </div>
             ))}
           </div>
