@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b5e20"/>
+      <stop offset="100%" style="stop-color:#0a3d10"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg3)"/>
+
+  <!-- Snowflakes -->
+  <circle cx="80" cy="60" r="3" fill="white" opacity="0.5"/>
+  <circle cx="200" cy="40" r="2" fill="white" opacity="0.4"/>
+  <circle cx="350" cy="70" r="2.5" fill="white" opacity="0.5"/>
+  <circle cx="500" cy="30" r="2" fill="white" opacity="0.4"/>
+  <circle cx="650" cy="55" r="3" fill="white" opacity="0.5"/>
+  <circle cx="740" cy="80" r="2" fill="white" opacity="0.4"/>
+  <circle cx="130" cy="150" r="2" fill="white" opacity="0.3"/>
+  <circle cx="670" cy="140" r="2.5" fill="white" opacity="0.4"/>
+  <circle cx="420" cy="110" r="2" fill="white" opacity="0.3"/>
+
+  <!-- Santa Claus figure (center) -->
+  <!-- Body / coat -->
+  <ellipse cx="400" cy="340" rx="70" ry="90" fill="#c62828"/>
+  <!-- Belt -->
+  <rect x="335" y="360" width="130" height="18" fill="#333"/>
+  <rect x="388" y="357" width="24" height="24" fill="#f1c40f" rx="2"/>
+  <!-- Head -->
+  <circle cx="400" cy="230" r="55" fill="#f5cba7"/>
+  <!-- Hat -->
+  <ellipse cx="400" cy="185" rx="60" ry="15" fill="#c62828"/>
+  <polygon points="340,185 400,70 460,185" fill="#c62828"/>
+  <circle cx="400" cy="72" r="12" fill="white"/>
+  <!-- Hat trim -->
+  <rect x="338" y="178" width="124" height="18" fill="white" rx="9"/>
+  <!-- Beard -->
+  <ellipse cx="400" cy="270" rx="50" ry="35" fill="white"/>
+  <ellipse cx="400" cy="285" rx="40" ry="25" fill="white"/>
+  <!-- Mustache -->
+  <ellipse cx="385" cy="258" rx="20" ry="10" fill="white" transform="rotate(-10,385,258)"/>
+  <ellipse cx="415" cy="258" rx="20" ry="10" fill="white" transform="rotate(10,415,258)"/>
+  <!-- Eyes -->
+  <circle cx="382" cy="235" r="6" fill="#333"/>
+  <circle cx="418" cy="235" r="6" fill="#333"/>
+  <circle cx="384" cy="233" r="2" fill="white"/>
+  <circle cx="420" cy="233" r="2" fill="white"/>
+  <!-- Rosy cheeks -->
+  <circle cx="360" cy="252" r="14" fill="#e57373" opacity="0.5"/>
+  <circle cx="440" cy="252" r="14" fill="#e57373" opacity="0.5"/>
+  <!-- Arms -->
+  <path d="M330,300 Q280,320 260,360" stroke="#c62828" stroke-width="30" fill="none" stroke-linecap="round"/>
+  <path d="M470,300 Q520,320 540,360" stroke="#c62828" stroke-width="30" fill="none" stroke-linecap="round"/>
+  <!-- Gloves/hands -->
+  <circle cx="258" cy="362" r="18" fill="#333"/>
+  <circle cx="542" cy="362" r="18" fill="#333"/>
+  <!-- Bag of gifts -->
+  <ellipse cx="560" cy="340" rx="40" ry="50" fill="#8b4513"/>
+  <path d="M530,300 Q560,280 590,300" stroke="#8b4513" stroke-width="8" fill="none"/>
+  <!-- Gift sticking out -->
+  <rect x="545" y="295" width="30" height="25" fill="#e74c3c" rx="2"/>
+  <rect x="558" y="295" width="6" height="25" fill="#f1c40f"/>
+  <rect x="545" y="305" width="30" height="5" fill="#f1c40f"/>
+
+  <!-- Floor -->
+  <rect x="0" y="445" width="800" height="155" fill="#0a3d10"/>
+  <rect x="0" y="443" width="800" height="8" fill="#155221"/>
+
+  <!-- People receiving (seniors, simplified) -->
+  <!-- Person left -->
+  <circle cx="160" cy="340" r="22" fill="#f5cba7"/>
+  <ellipse cx="160" cy="392" rx="25" ry="35" fill="#3949ab"/>
+  <!-- Arms reaching up -->
+  <path d="M138,360 Q110,330 100,310" stroke="#3949ab" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <circle cx="100" cy="308" r="10" fill="#f5cba7"/>
+  <!-- Happy eyes and mouth -->
+  <circle cx="153" cy="335" r="3" fill="#333"/>
+  <circle cx="167" cy="335" r="3" fill="#333"/>
+  <path d="M150,348 Q160,357 170,348" stroke="#8b4513" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Person right -->
+  <circle cx="640" cy="345" r="22" fill="#bcaaa4"/>
+  <ellipse cx="640" cy="397" rx="25" ry="35" fill="#6a1b9a"/>
+  <path d="M662,363 Q690,333 700,313" stroke="#6a1b9a" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <circle cx="700" cy="311" r="10" fill="#bcaaa4"/>
+  <circle cx="633" cy="340" r="3" fill="#333"/>
+  <circle cx="647" cy="340" r="3" fill="#333"/>
+  <path d="M630,353 Q640,362 650,353" stroke="#8b4513" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Stars / sparkles -->
+  <polygon points="400,140 404,152 416,152 406,160 410,172 400,164 390,172 394,160 384,152 396,152" fill="#f1c40f" opacity="0.9"/>
+  <polygon points="300,90 303,99 312,99 305,104 308,113 300,108 292,113 295,104 288,99 297,99" fill="#f1c40f" opacity="0.7"/>
+  <polygon points="500,95 503,104 512,104 505,109 508,118 500,113 492,118 495,109 488,104 497,104" fill="#f1c40f" opacity="0.7"/>
+
+  <!-- Text banner -->
+  <rect x="170" y="478" width="460" height="70" fill="rgba(0,0,0,0.35)" rx="10"/>
+  <text x="400" y="508" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Spotkanie z Mikołajem</text>
+  <text x="400" y="534" font-family="Georgia, serif" font-size="17" fill="#f1c40f" text-anchor="middle">DPS Pod Kasztanami · Grudzień 2025</text>
+
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" rx="8"/>
+</svg>

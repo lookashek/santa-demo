@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a148c"/>
+      <stop offset="100%" style="stop-color:#1a0035"/>
+    </linearGradient>
+    <radialGradient id="boxGlow" cx="50%" cy="60%" r="35%">
+      <stop offset="0%" style="stop-color:#f9a825;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#f9a825;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg7)"/>
+  <rect width="800" height="600" fill="url(#boxGlow)"/>
+
+  <!-- Stars scattered -->
+  <circle cx="40" cy="35" r="2" fill="white" opacity="0.7"/>
+  <circle cx="120" cy="60" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="220" cy="28" r="2.5" fill="white" opacity="0.8"/>
+  <circle cx="400" cy="45" r="2" fill="white" opacity="0.6"/>
+  <circle cx="570" cy="25" r="2" fill="white" opacity="0.7"/>
+  <circle cx="680" cy="55" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="760" cy="30" r="2" fill="white" opacity="0.7"/>
+  <circle cx="80" cy="160" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="720" cy="150" r="2" fill="white" opacity="0.4"/>
+  <circle cx="50" cy="300" r="1.5" fill="white" opacity="0.3"/>
+  <circle cx="750" cy="280" r="2" fill="white" opacity="0.3"/>
+
+  <!-- Sparkles radiating from box opening -->
+  <!-- Sparkle lines -->
+  <line x1="400" y1="200" x2="400" y2="150" stroke="#f9a825" stroke-width="3" opacity="0.8"/>
+  <line x1="400" y1="200" x2="440" y2="155" stroke="#f9a825" stroke-width="2.5" opacity="0.7"/>
+  <line x1="400" y1="200" x2="350" y2="155" stroke="#f9a825" stroke-width="2.5" opacity="0.7"/>
+  <line x1="400" y1="200" x2="470" y2="170" stroke="#f9a825" stroke-width="2" opacity="0.6"/>
+  <line x1="400" y1="200" x2="330" y2="170" stroke="#f9a825" stroke-width="2" opacity="0.6"/>
+  <line x1="400" y1="200" x2="490" y2="195" stroke="#f9a825" stroke-width="2" opacity="0.5"/>
+  <line x1="400" y1="200" x2="310" y2="195" stroke="#f9a825" stroke-width="2" opacity="0.5"/>
+  <!-- Sparkle dots -->
+  <circle cx="400" cy="148" r="5" fill="#f9a825"/>
+  <circle cx="442" cy="153" r="4" fill="#f9a825" opacity="0.8"/>
+  <circle cx="358" cy="153" r="4" fill="#f9a825" opacity="0.8"/>
+  <circle cx="472" cy="168" r="3" fill="#f9a825" opacity="0.7"/>
+  <circle cx="328" cy="168" r="3" fill="#f9a825" opacity="0.7"/>
+  <circle cx="492" cy="193" r="3" fill="#f9a825" opacity="0.6"/>
+  <circle cx="308" cy="193" r="3" fill="#f9a825" opacity="0.6"/>
+
+  <!-- Gift box (open, large, center) -->
+  <!-- Box body -->
+  <rect x="280" y="280" width="240" height="180" fill="#9c27b0" rx="4"/>
+  <!-- Box interior (open top) -->
+  <rect x="290" y="290" width="220" height="40" fill="#7b1fa2" rx="2" opacity="0.8"/>
+  <!-- Tissue paper coming out -->
+  <path d="M310,285 Q330,260 350,280 Q370,260 390,280 Q410,260 430,280 Q450,260 470,280 Q490,260 510,280 L510,290 L290,290Z" fill="#fff9c4" opacity="0.9"/>
+  <path d="M320,282 Q340,258 360,276 Q380,258 400,276 Q420,258 440,276 Q460,258 480,276 L480,286 L300,286Z" fill="white" opacity="0.7"/>
+  <!-- Ribbon on box -->
+  <rect x="388" y="280" width="24" height="180" fill="#e040fb" opacity="0.8"/>
+  <rect x="280" y="358" width="240" height="18" fill="#e040fb" opacity="0.8"/>
+  <!-- Lid (open, tilted) -->
+  <rect x="265" y="205" width="250" height="85" fill="#ab47bc" rx="4" transform="rotate(-15,265,205)"/>
+  <rect x="265" y="205" width="250" height="85" fill="none" stroke="#ce93d8" stroke-width="2" rx="4" transform="rotate(-15,265,205)"/>
+  <!-- Ribbon on lid -->
+  <rect x="385" y="205" width="20" height="85" fill="#ea80fc" opacity="0.8" transform="rotate(-15,265,205)"/>
+  <!-- Bow on lid -->
+  <ellipse cx="375" cy="230" rx="30" ry="12" fill="#ea80fc" transform="rotate(-25,375,230)"/>
+  <ellipse cx="390" cy="222" rx="30" ry="12" fill="#e040fb" transform="rotate(5,390,222)"/>
+  <circle cx="382" cy="226" r="10" fill="#ea80fc"/>
+
+  <!-- Content coming out of box (toys/gifts) -->
+  <rect x="360" y="245" width="40" height="40" fill="#ef5350" rx="3" transform="rotate(10,380,265)"/>
+  <line x1="360" y1="265" x2="400" y2="265" stroke="#f9a825" stroke-width="3"/>
+  <line x1="380" y1="245" x2="380" y2="285" stroke="#f9a825" stroke-width="3"/>
+  <!-- Star toy -->
+  <polygon points="420,255 424,267 436,267 426,275 430,287 420,279 410,287 414,275 404,267 416,267" fill="#f9a825" transform="rotate(15,420,271)"/>
+
+  <!-- Person (senior opening gift) -->
+  <!-- Body -->
+  <ellipse cx="580" cy="370" rx="45" ry="60" fill="#1565c0"/>
+  <!-- Head -->
+  <circle cx="580" cy="300" r="38" fill="#f5cba7"/>
+  <!-- White hair -->
+  <ellipse cx="580" cy="278" rx="38" ry="18" fill="white"/>
+  <!-- Glasses -->
+  <circle cx="567" cy="297" r="10" fill="none" stroke="#555" stroke-width="2.5"/>
+  <circle cx="593" cy="297" r="10" fill="none" stroke="#555" stroke-width="2.5"/>
+  <line x1="577" cy="297" x2="577" y2="297" stroke="#555" stroke-width="2.5"/>
+  <line x1="557" cy="297" x2="543" y2="300" stroke="#555" stroke-width="2"/>
+  <line x1="603" cy="297" x2="617" y2="300" stroke="#555" stroke-width="2"/>
+  <!-- Eyes (happy, squinted) -->
+  <path d="M562,295 Q567,290 572,295" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M588,295 Q593,290 598,295" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Big smile -->
+  <path d="M563,315 Q580,332 597,315" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Rosy cheeks -->
+  <circle cx="556" cy="310" r="14" fill="#e57373" opacity="0.45"/>
+  <circle cx="604" cy="310" r="14" fill="#e57373" opacity="0.45"/>
+  <!-- Arms reaching toward box -->
+  <path d="M535,345 Q500,330 480,310" stroke="#1565c0" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <circle cx="478" cy="308" r="14" fill="#f5cba7"/>
+  <path d="M625,345 Q665,340 680,350" stroke="#1565c0" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <circle cx="682" cy="352" r="14" fill="#f5cba7"/>
+
+  <!-- Exclamation / joy -->
+  <text x="670" y="240" font-size="50" fill="#f9a825" opacity="0.8" font-family="serif">!</text>
+  <text x="90" y="250" font-size="40" fill="#f9a825" opacity="0.6" font-family="serif">✨</text>
+
+  <!-- Text banner -->
+  <rect x="160" y="495" width="480" height="70" fill="rgba(0,0,0,0.35)" rx="10"/>
+  <text x="400" y="525" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Otwarcie paczek</text>
+  <text x="400" y="551" font-family="Georgia, serif" font-size="17" fill="#ce93d8" text-anchor="middle">DPS Złota Jesień · Grudzień 2025</text>
+
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="3" rx="8"/>
+</svg>

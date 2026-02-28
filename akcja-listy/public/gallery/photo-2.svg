@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a4e"/>
+      <stop offset="100%" style="stop-color:#0d0d2b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background - night sky -->
+  <rect width="800" height="600" fill="url(#bg2)"/>
+
+  <!-- Stars in the sky -->
+  <circle cx="60" cy="40" r="2" fill="white" opacity="0.8"/>
+  <circle cx="120" cy="70" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="200" cy="30" r="2.5" fill="white" opacity="0.6"/>
+  <circle cx="300" cy="55" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="420" cy="25" r="2" fill="white" opacity="0.7"/>
+  <circle cx="500" cy="60" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="600" cy="35" r="2" fill="white" opacity="0.8"/>
+  <circle cx="690" cy="50" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="750" cy="80" r="2.5" fill="white" opacity="0.6"/>
+  <circle cx="80" cy="130" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="350" cy="90" r="2" fill="white" opacity="0.6"/>
+  <circle cx="480" cy="110" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="650" cy="100" r="2" fill="white" opacity="0.5"/>
+  <circle cx="730" cy="160" r="1.5" fill="white" opacity="0.6"/>
+
+  <!-- Moon -->
+  <circle cx="680" cy="80" r="45" fill="#f0e68c" opacity="0.9"/>
+  <circle cx="695" cy="68" r="38" fill="#1a1a4e"/>
+
+  <!-- Snow on ground -->
+  <ellipse cx="400" cy="570" rx="420" ry="60" fill="white" opacity="0.15"/>
+  <rect x="0" y="540" width="800" height="60" fill="white" opacity="0.12"/>
+
+  <!-- Candle 1 (left) -->
+  <rect x="140" y="320" width="22" height="120" fill="#f8f8e8" rx="3"/>
+  <rect x="136" y="430" width="30" height="10" fill="#ddd" rx="2"/>
+  <!-- Flame 1 -->
+  <ellipse cx="151" cy="318" rx="8" ry="14" fill="#f39c12" opacity="0.9"/>
+  <ellipse cx="151" cy="316" rx="5" ry="10" fill="#f1c40f"/>
+  <ellipse cx="151" cy="318" rx="3" ry="6" fill="#fff" opacity="0.7"/>
+  <!-- Glow -->
+  <circle cx="151" cy="318" r="25" fill="url(#glow)"/>
+  <!-- Wax drips -->
+  <path d="M140,380 Q137,395 140,400" stroke="#f8f8e8" stroke-width="4" fill="none"/>
+  <path d="M162,360 Q165,375 162,380" stroke="#f8f8e8" stroke-width="3" fill="none"/>
+
+  <!-- Candle 2 (center) -->
+  <rect x="375" y="290" width="28" height="150" fill="#ffe4e1" rx="3"/>
+  <rect x="370" y="430" width="38" height="12" fill="#ddd" rx="2"/>
+  <!-- Flame 2 -->
+  <ellipse cx="389" cy="288" rx="10" ry="18" fill="#f39c12" opacity="0.9"/>
+  <ellipse cx="389" cy="285" rx="7" ry="13" fill="#f1c40f"/>
+  <ellipse cx="389" cy="287" rx="4" ry="8" fill="#fff" opacity="0.7"/>
+  <circle cx="389" cy="288" r="30" fill="url(#glow)"/>
+
+  <!-- Candle 3 (right) -->
+  <rect x="630" y="340" width="22" height="100" fill="#e8f0ff" rx="3"/>
+  <rect x="626" y="430" width="30" height="10" fill="#ddd" rx="2"/>
+  <!-- Flame 3 -->
+  <ellipse cx="641" cy="338" rx="8" ry="14" fill="#f39c12" opacity="0.9"/>
+  <ellipse cx="641" cy="336" rx="5" ry="10" fill="#f1c40f"/>
+  <ellipse cx="641" cy="338" rx="3" ry="6" fill="#fff" opacity="0.7"/>
+  <circle cx="641" cy="338" r="25" fill="url(#glow)"/>
+
+  <!-- Musical notes floating -->
+  <!-- Note 1 -->
+  <text x="250" y="200" font-size="40" fill="#f1c40f" opacity="0.8" font-family="serif">♪</text>
+  <!-- Note 2 -->
+  <text x="340" y="160" font-size="32" fill="#f1c40f" opacity="0.6" font-family="serif">♫</text>
+  <!-- Note 3 -->
+  <text x="480" y="180" font-size="36" fill="#f1c40f" opacity="0.7" font-family="serif">♪</text>
+  <!-- Note 4 -->
+  <text x="550" y="150" font-size="28" fill="#f1c40f" opacity="0.5" font-family="serif">♫</text>
+  <!-- Note 5 -->
+  <text x="190" y="240" font-size="28" fill="#f1c40f" opacity="0.5" font-family="serif">♩</text>
+
+  <!-- People silhouettes singing (simplified) -->
+  <!-- Person 1 -->
+  <circle cx="200" cy="340" r="22" fill="#8d6e63"/>
+  <ellipse cx="200" cy="390" rx="24" ry="32" fill="#1565c0"/>
+  <!-- Mouth open -->
+  <ellipse cx="200" cy="348" rx="8" ry="5" fill="#c62828"/>
+
+  <!-- Person 2 -->
+  <circle cx="280" cy="330" r="22" fill="#f5cba7"/>
+  <ellipse cx="280" cy="380" rx="24" ry="32" fill="#880e4f"/>
+  <ellipse cx="280" cy="337" rx="7" ry="4.5" fill="#c62828"/>
+
+  <!-- Person 3 (center, larger, conductor?) -->
+  <circle cx="400" cy="320" r="26" fill="#bcaaa4"/>
+  <ellipse cx="400" cy="375" rx="28" ry="36" fill="#1b5e20"/>
+  <ellipse cx="400" cy="328" rx="9" ry="5.5" fill="#c62828"/>
+  <!-- Song book -->
+  <rect x="415" y="360" width="30" height="38" fill="#fff" rx="2"/>
+  <rect x="415" y="360" width="30" height="38" fill="none" stroke="#999" stroke-width="1"/>
+  <line x1="420" y1="370" x2="440" y2="370" stroke="#999" stroke-width="1"/>
+  <line x1="420" y1="377" x2="440" y2="377" stroke="#999" stroke-width="1"/>
+  <line x1="420" y1="384" x2="440" y2="384" stroke="#999" stroke-width="1"/>
+
+  <!-- Person 4 -->
+  <circle cx="520" cy="335" r="22" fill="#f5cba7"/>
+  <ellipse cx="520" cy="385" rx="24" ry="32" fill="#4a148c"/>
+  <ellipse cx="520" cy="342" rx="7" ry="4.5" fill="#c62828"/>
+
+  <!-- Person 5 -->
+  <circle cx="600" cy="342" r="22" fill="#d7ccc8"/>
+  <ellipse cx="600" cy="392" rx="24" ry="32" fill="#bf360c"/>
+  <ellipse cx="600" cy="350" rx="8" ry="5" fill="#c62828"/>
+
+  <!-- Pine branches (decorative bottom) -->
+  <path d="M0,490 Q50,470 100,490 Q150,510 200,490 Q250,470 300,490 Q350,510 400,490 Q450,470 500,490 Q550,510 600,490 Q650,470 700,490 Q750,510 800,490" stroke="#2e7d32" stroke-width="20" fill="none" opacity="0.6"/>
+  <!-- Berries -->
+  <circle cx="100" cy="487" r="5" fill="#c62828"/>
+  <circle cx="250" cy="488" r="5" fill="#c62828"/>
+  <circle cx="400" cy="487" r="5" fill="#c62828"/>
+  <circle cx="550" cy="488" r="5" fill="#c62828"/>
+  <circle cx="700" cy="487" r="5" fill="#c62828"/>
+
+  <!-- Text banner -->
+  <rect x="150" y="490" width="500" height="75" fill="rgba(0,0,0,0.5)" rx="10"/>
+  <text x="400" y="522" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Wspólne kolędowanie</text>
+  <text x="400" y="550" font-family="Georgia, serif" font-size="17" fill="#f1c40f" text-anchor="middle">DPS Słoneczny Dom · Grudzień 2024</text>
+
+  <!-- Border -->
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="rgba(255,255,200,0.2)" stroke-width="3" rx="8"/>
+</svg>

@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8e1"/>
+      <stop offset="100%" style="stop-color:#ffe082"/>
+    </linearGradient>
+    <linearGradient id="table4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8d6e63"/>
+      <stop offset="100%" style="stop-color:#6d4c41"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg4)"/>
+
+  <!-- Decorative wallpaper pattern (top) -->
+  <rect x="0" y="0" width="800" height="220" fill="#f9e4b7"/>
+  <path d="M0,220 Q200,200 400,220 Q600,240 800,220" fill="#ffe082" opacity="0.5"/>
+
+  <!-- Window in background -->
+  <rect x="310" y="30" width="180" height="150" fill="#b3e5fc" rx="4"/>
+  <rect x="308" y="28" width="184" height="154" fill="none" stroke="#8d6e63" stroke-width="6" rx="5"/>
+  <line x1="400" y1="28" x2="400" y2="182" stroke="#8d6e63" stroke-width="4"/>
+  <line x1="308" y1="105" x2="492" y2="105" stroke="#8d6e63" stroke-width="4"/>
+  <!-- Snow outside -->
+  <ellipse cx="340" cy="175" rx="25" ry="10" fill="white" opacity="0.7"/>
+  <ellipse cx="440" cy="178" rx="20" ry="8" fill="white" opacity="0.7"/>
+  <!-- Star in sky -->
+  <polygon points="400,50 404,62 416,62 406,70 410,82 400,74 390,82 394,70 384,62 396,62" fill="#f1c40f" opacity="0.9"/>
+  <!-- Window curtains -->
+  <path d="M308,28 Q330,80 315,182" stroke="#e57373" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <path d="M492,28 Q470,80 485,182" stroke="#e57373" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+  <!-- Table -->
+  <rect x="80" y="350" width="640" height="18" fill="url(#table4)" rx="4"/>
+  <rect x="80" y="368" width="640" height="150" fill="#a1887f" rx="0"/>
+  <!-- Tablecloth -->
+  <rect x="80" y="340" width="640" height="20" fill="white" rx="4"/>
+  <path d="M80,340 Q120,360 160,340 Q200,320 240,340 Q280,360 320,340 Q360,320 400,340 Q440,360 480,340 Q520,320 560,340 Q600,360 640,340 Q680,320 720,340" fill="white"/>
+
+  <!-- Plates and food on table -->
+  <!-- Plate 1 -->
+  <ellipse cx="200" cy="345" rx="55" ry="15" fill="#eeeeee"/>
+  <ellipse cx="200" cy="342" rx="45" ry="12" fill="white"/>
+  <!-- Food on plate 1 - pierogi -->
+  <ellipse cx="195" cy="340" rx="18" ry="10" fill="#f5cba7"/>
+  <ellipse cx="210" cy="342" rx="16" ry="9" fill="#f5e6d3"/>
+  <!-- Plate 2 -->
+  <ellipse cx="400" cy="345" rx="55" ry="15" fill="#eeeeee"/>
+  <ellipse cx="400" cy="342" rx="45" ry="12" fill="white"/>
+  <!-- Food on plate 2 - bigos -->
+  <ellipse cx="395" cy="340" rx="20" ry="11" fill="#8d6e63"/>
+  <ellipse cx="408" cy="338" rx="15" ry="9" fill="#795548"/>
+  <!-- Plate 3 -->
+  <ellipse cx="600" cy="345" rx="55" ry="15" fill="#eeeeee"/>
+  <ellipse cx="600" cy="342" rx="45" ry="12" fill="white"/>
+  <!-- Food on plate 3 - fish -->
+  <ellipse cx="598" cy="340" rx="22" ry="10" fill="#90caf9"/>
+  <ellipse cx="610" cy="338" rx="8" ry="6" fill="#64b5f6"/>
+
+  <!-- Candles on table -->
+  <rect x="290" y="300" width="14" height="50" fill="#fff9c4" rx="2"/>
+  <ellipse cx="297" cy="299" rx="7" ry="3" fill="#ffe082"/>
+  <!-- Flame -->
+  <ellipse cx="297" cy="295" rx="5" ry="9" fill="#ff9800" opacity="0.9"/>
+  <ellipse cx="297" cy="293" rx="3" ry="6" fill="#ffc107"/>
+  <ellipse cx="297" cy="295" rx="2" ry="4" fill="white" opacity="0.6"/>
+
+  <rect x="494" y="295" width="14" height="55" fill="#ffccbc" rx="2"/>
+  <ellipse cx="501" cy="294" rx="7" ry="3" fill="#ffe082"/>
+  <ellipse cx="501" cy="290" rx="5" ry="9" fill="#ff9800" opacity="0.9"/>
+  <ellipse cx="501" cy="288" rx="3" ry="6" fill="#ffc107"/>
+  <ellipse cx="501" cy="290" rx="2" ry="4" fill="white" opacity="0.6"/>
+
+  <!-- Glasses of wine -->
+  <path d="M342,310 Q340,330 348,345 Q352,350 342,355 L362,355 Q352,350 356,345 Q364,330 362,310Z" fill="#ef9a9a" opacity="0.7"/>
+  <rect x="340" y="305" width="22" height="8" fill="#ef9a9a" rx="2" opacity="0.7"/>
+
+  <!-- People sitting at table (heads visible) -->
+  <!-- Person 1 -->
+  <circle cx="160" cy="270" r="28" fill="#f5cba7"/>
+  <ellipse cx="160" cy="250" rx="28" ry="14" fill="#795548"/>
+  <circle cx="152" cy="265" r="3" fill="#333"/>
+  <circle cx="168" cy="265" r="3" fill="#333"/>
+  <path d="M150,278 Q160,288 170,278" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Person 2 -->
+  <circle cx="360" cy="265" r="28" fill="#d7ccc8"/>
+  <ellipse cx="360" cy="245" rx="28" ry="14" fill="#607d8b"/>
+  <circle cx="352" cy="260" r="3" fill="#333"/>
+  <circle cx="368" cy="260" r="3" fill="#333"/>
+  <path d="M350,273 Q360,283 370,273" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Person 3 -->
+  <circle cx="560" cy="268" r="28" fill="#bcaaa4"/>
+  <ellipse cx="560" cy="248" rx="28" ry="14" fill="#4a148c"/>
+  <circle cx="552" cy="263" r="3" fill="#333"/>
+  <circle cx="568" cy="263" r="3" fill="#333"/>
+  <path d="M550,276 Q560,286 570,276" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Person 4 -->
+  <circle cx="650" cy="265" r="28" fill="#ffccbc"/>
+  <ellipse cx="650" cy="245" rx="28" ry="14" fill="#e64a19"/>
+  <circle cx="642" cy="260" r="3" fill="#333"/>
+  <circle cx="658" cy="260" r="3" fill="#333"/>
+  <path d="M640,273 Q650,283 660,273" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Christmas decorations hanging -->
+  <!-- Pine branch garland top -->
+  <path d="M0,20 Q100,50 200,20 Q300,-10 400,20 Q500,50 600,20 Q700,-10 800,20" stroke="#388e3c" stroke-width="10" fill="none"/>
+  <!-- Ornaments on garland -->
+  <circle cx="100" cy="40" r="10" fill="#e53935"/>
+  <circle cx="300" cy="15" r="10" fill="#1565c0"/>
+  <circle cx="500" cy="40" r="10" fill="#f9a825"/>
+  <circle cx="700" cy="15" r="10" fill="#6a1b9a"/>
+  <!-- Gold tops -->
+  <rect x="97" y="29" width="6" height="8" fill="#f9a825" rx="1"/>
+  <rect x="297" y="4" width="6" height="8" fill="#f9a825" rx="1"/>
+  <rect x="497" y="29" width="6" height="8" fill="#f9a825" rx="1"/>
+  <rect x="697" y="4" width="6" height="8" fill="#f9a825" rx="1"/>
+
+  <!-- Text banner -->
+  <rect x="160" y="500" width="480" height="70" fill="rgba(120,80,20,0.2)" rx="10"/>
+  <text x="400" y="530" font-family="Georgia, serif" font-size="22" fill="#4e342e" text-anchor="middle" font-weight="bold">Wigilia w placówce</text>
+  <text x="400" y="556" font-family="Georgia, serif" font-size="17" fill="#795548" text-anchor="middle">DPS Pod Kasztanami · Grudzień 2024</text>
+
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="rgba(150,100,50,0.3)" stroke-width="3" rx="8"/>
+</svg>

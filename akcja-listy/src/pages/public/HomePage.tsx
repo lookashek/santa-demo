@@ -2,6 +2,17 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getAvailableLetters } from '../../data/db-helpers';
 
+const SPONSORS = [
+  { id: 1, name: 'PekoBanka', logo: '/sponsors/sponsor-1.svg' },
+  { id: 2, name: 'GreenMart', logo: '/sponsors/sponsor-2.svg' },
+  { id: 3, name: 'SpeedEx', logo: '/sponsors/sponsor-3.svg' },
+  { id: 4, name: 'Apteka Pod Lipą', logo: '/sponsors/sponsor-4.svg' },
+  { id: 5, name: 'Arko Budownictwo', logo: '/sponsors/sponsor-5.svg' },
+  { id: 6, name: 'Fundacja Serce', logo: '/sponsors/sponsor-6.svg' },
+  { id: 7, name: 'PolTech', logo: '/sponsors/sponsor-7.svg' },
+  { id: 8, name: 'Restauracja Staropolska', logo: '/sponsors/sponsor-8.svg' },
+];
+
 const FAQ_ITEMS = [
   {
     question: 'Jak wybrać list?',
@@ -159,21 +170,39 @@ export default function HomePage() {
 
       {/* Sponsorzy */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-semibold text-stone-900 text-center mb-10">
-            Nasi sponsorzy
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {Array.from({ length: 6 }).map((_, i) => (
+        <h2 className="text-2xl font-semibold text-stone-900 text-center mb-10">
+          Nasi sponsorzy
+        </h2>
+        <div className="overflow-hidden relative">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+            style={{ background: 'linear-gradient(to right, white, transparent)' }} />
+          <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+            style={{ background: 'linear-gradient(to left, white, transparent)' }} />
+          {/* Scrolling track */}
+          <div className="flex" style={{ animation: 'sponsorScroll 28s linear infinite' }}>
+            {[...SPONSORS, ...SPONSORS].map((sponsor, i) => (
               <div
                 key={i}
-                className="bg-stone-100 rounded-xl h-20 flex items-center justify-center text-stone-400 text-xs font-medium"
+                className="flex-shrink-0 mx-4 bg-stone-50 rounded-xl border border-stone-100 flex items-center justify-center"
+                style={{ width: 200, height: 84 }}
               >
-                Logo sponsora
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  className="w-full h-full object-contain p-2"
+                  draggable={false}
+                />
               </div>
             ))}
           </div>
         </div>
+        <style>{`
+          @keyframes sponsorScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
       </section>
     </div>
   );

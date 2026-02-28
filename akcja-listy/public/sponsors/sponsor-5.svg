@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
+  <!-- Arko Budownictwo - firma budowlana -->
+  <rect width="240" height="100" fill="#37474f" rx="10"/>
+  <!-- House icon -->
+  <polygon points="48,68 48,40 68,22 88,40 88,68" fill="none" stroke="#ff8f00" stroke-width="3.5" stroke-linejoin="round"/>
+  <polygon points="48,40 68,22 88,40" fill="#ff8f00" opacity="0.25"/>
+  <rect x="56" y="50" width="14" height="18" fill="#ff8f00" opacity="0.7" rx="1"/>
+  <!-- Name -->
+  <text x="158" y="42" font-family="Arial Black, sans-serif" font-size="28" fill="#ff8f00" text-anchor="middle" font-weight="900">ARKO</text>
+  <text x="158" y="63" font-family="Arial, sans-serif" font-size="12" fill="#b0bec5" text-anchor="middle" letter-spacing="2.5">BUDOWNICTWO</text>
+  <rect x="103" y="70" width="110" height="1.5" fill="#546e7a"/>
+  <text x="158" y="83" font-family="Arial, sans-serif" font-size="9" fill="#78909c" text-anchor="middle" letter-spacing="1">BUDUJEMY DLA WSPÓLNOTY</text>
+</svg>

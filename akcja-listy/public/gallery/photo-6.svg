@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8f00"/>
+      <stop offset="100%" style="stop-color:#e65100"/>
+    </linearGradient>
+    <radialGradient id="centerGlow6" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" style="stop-color:#fff9c4;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#fff9c4;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg6)"/>
+  <rect width="800" height="600" fill="url(#centerGlow6)"/>
+
+  <!-- Decorative circles (bokeh effect) -->
+  <circle cx="80" cy="80" r="40" fill="white" opacity="0.08"/>
+  <circle cx="700" cy="60" r="55" fill="white" opacity="0.06"/>
+  <circle cx="150" cy="480" r="45" fill="white" opacity="0.07"/>
+  <circle cx="650" cy="500" r="60" fill="white" opacity="0.06"/>
+  <circle cx="400" cy="30" r="30" fill="white" opacity="0.08"/>
+
+  <!-- Large hearts floating -->
+  <path d="M120,100 C120,80 140,70 150,88 C160,70 180,80 180,100 C180,120 150,145 150,145 C150,145 120,120 120,100Z" fill="white" opacity="0.25"/>
+  <path d="M620,80 C620,63 637,54 645,70 C653,54 670,63 670,80 C670,97 645,118 645,118 C645,118 620,97 620,80Z" fill="white" opacity="0.2"/>
+  <path d="M50,310 C50,298 63,291 69,303 C75,291 88,298 88,310 C88,322 69,335 69,335 C69,335 50,322 50,310Z" fill="white" opacity="0.18"/>
+  <path d="M710,350 C710,338 723,331 729,343 C735,331 748,338 748,350 C748,362 729,375 729,375 C729,375 710,362 710,350Z" fill="white" opacity="0.18"/>
+
+  <!-- Group of seniors (5 people, happy, at a round table) -->
+  <!-- Round table -->
+  <ellipse cx="400" cy="390" rx="180" ry="60" fill="#bf360c" opacity="0.4"/>
+  <ellipse cx="400" cy="385" rx="175" ry="55" fill="#8d6e63"/>
+  <ellipse cx="400" cy="380" rx="165" ry="48" fill="#a1887f"/>
+  <!-- Tablecloth -->
+  <ellipse cx="400" cy="375" rx="155" ry="43" fill="#fff9c4" opacity="0.9"/>
+
+  <!-- Items on table -->
+  <ellipse cx="360" cy="372" rx="30" ry="10" fill="white"/>
+  <ellipse cx="440" cy="370" rx="30" ry="10" fill="white"/>
+  <!-- Tea cups -->
+  <ellipse cx="330" cy="368" rx="12" ry="5" fill="#f5f5f5"/>
+  <path d="M318,366 Q310,362 318,358" stroke="#f5f5f5" stroke-width="3" fill="none"/>
+  <ellipse cx="470" cy="366" rx="12" ry="5" fill="#f5f5f5"/>
+  <path d="M458,364 Q450,360 458,356" stroke="#f5f5f5" stroke-width="3" fill="none"/>
+  <!-- Cake/torte -->
+  <ellipse cx="400" cy="368" rx="25" ry="10" fill="#f48fb1"/>
+  <ellipse cx="400" cy="360" rx="25" ry="10" fill="#f06292"/>
+  <ellipse cx="400" cy="352" rx="25" ry="10" fill="#e91e63"/>
+  <!-- Candles on cake -->
+  <rect x="393" y="340" width="5" height="14" fill="#fff9c4" rx="1"/>
+  <rect x="403" y="340" width="5" height="14" fill="#fff9c4" rx="1"/>
+  <ellipse cx="395" cy="340" rx="3" ry="5" fill="#ff9800"/>
+  <ellipse cx="405" cy="340" rx="3" ry="5" fill="#ff9800"/>
+
+  <!-- Person 1 (top, smiling) -->
+  <circle cx="400" cy="250" r="32" fill="#f5cba7"/>
+  <ellipse cx="400" cy="228" rx="32" ry="16" fill="#8d6e63"/>
+  <circle cx="390" cy="244" r="4" fill="#333"/>
+  <circle cx="410" cy="244" r="4" fill="#333"/>
+  <path d="M387,262 Q400,275 413,262" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="380" cy="256" r="10" fill="#e57373" opacity="0.5"/>
+  <circle cx="420" cy="256" r="10" fill="#e57373" opacity="0.5"/>
+
+  <!-- Person 2 (left) -->
+  <circle cx="235" cy="315" r="28" fill="#ffccbc"/>
+  <ellipse cx="235" cy="296" rx="28" ry="14" fill="#4e342e"/>
+  <circle cx="227" cy="310" r="3.5" fill="#333"/>
+  <circle cx="243" cy="310" r="3.5" fill="#333"/>
+  <path d="M224,323 Q235,333 246,323" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="220" cy="320" r="9" fill="#e57373" opacity="0.45"/>
+  <circle cx="250" cy="320" r="9" fill="#e57373" opacity="0.45"/>
+
+  <!-- Person 3 (right) -->
+  <circle cx="565" cy="315" r="28" fill="#d7ccc8"/>
+  <ellipse cx="565" cy="296" rx="28" ry="14" fill="#5d4037"/>
+  <circle cx="557" cy="310" r="3.5" fill="#333"/>
+  <circle cx="573" cy="310" r="3.5" fill="#333"/>
+  <path d="M554,323 Q565,333 576,323" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="550" cy="318" r="9" fill="#e57373" opacity="0.45"/>
+  <circle cx="580" cy="318" r="9" fill="#e57373" opacity="0.45"/>
+
+  <!-- Person 4 (bottom-left) -->
+  <circle cx="285" cy="430" r="28" fill="#bcaaa4"/>
+  <ellipse cx="285" cy="411" rx="28" ry="14" fill="#37474f"/>
+  <circle cx="277" cy="425" r="3.5" fill="#333"/>
+  <circle cx="293" cy="425" r="3.5" fill="#333"/>
+  <path d="M274,438 Q285,448 296,438" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Person 5 (bottom-right) -->
+  <circle cx="515" cy="428" r="28" fill="#f5cba7"/>
+  <ellipse cx="515" cy="409" rx="28" ry="14" fill="#6d4c41"/>
+  <circle cx="507" cy="423" r="3.5" fill="#333"/>
+  <circle cx="523" cy="423" r="3.5" fill="#333"/>
+  <path d="M504,436 Q515,446 526,436" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Small hearts around the group -->
+  <path d="M310,200 C310,194 316,191 319,197 C322,191 328,194 328,200 C328,206 319,213 319,213 C319,213 310,206 310,200Z" fill="white" opacity="0.7"/>
+  <path d="M472,195 C472,189 478,186 481,192 C484,186 490,189 490,195 C490,201 481,208 481,208 C481,208 472,201 472,195Z" fill="white" opacity="0.7"/>
+  <path d="M175,260 C175,255 180,252 183,257 C186,252 191,255 191,260 C191,265 183,271 183,271 C183,271 175,265 175,260Z" fill="white" opacity="0.6"/>
+  <path d="M609,255 C609,250 614,247 617,252 C620,247 625,250 625,255 C625,260 617,266 617,266 C617,266 609,260 609,255Z" fill="white" opacity="0.6"/>
+
+  <!-- Confetti dots -->
+  <circle cx="100" cy="160" r="5" fill="white" opacity="0.5"/>
+  <circle cx="680" cy="180" r="4" fill="white" opacity="0.5"/>
+  <circle cx="60" cy="420" r="5" fill="white" opacity="0.4"/>
+  <circle cx="740" cy="400" r="4" fill="white" opacity="0.4"/>
+  <circle cx="200" cy="140" r="3" fill="white" opacity="0.4"/>
+  <circle cx="600" cy="130" r="3" fill="white" opacity="0.4"/>
+
+  <!-- Text banner -->
+  <rect x="170" y="495" width="460" height="70" fill="rgba(0,0,0,0.25)" rx="10"/>
+  <text x="400" y="525" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Radość seniorów</text>
+  <text x="400" y="551" font-family="Georgia, serif" font-size="17" fill="#fff9c4" text-anchor="middle">DPS Zielona Przystań · Grudzień 2024</text>
+
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" rx="8"/>
+</svg>
